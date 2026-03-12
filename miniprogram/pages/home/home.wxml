@@ -28,4 +28,10 @@
       <view class="home-card-desc">{{item.desc}}</view>
     </view>
   </view>
+
+  <!-- 品牌与版本 -->
+  <view class="brand-footer">
+    <view class="brand-name">{{brandName}}</view>
+    <view class="brand-version">{{version}}</view>
+  </view>
 </view>

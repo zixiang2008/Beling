@@ -4,7 +4,18 @@
 
 (function () {
     const t = I18n.t.bind(I18n);
-    const pageModules = { emotions: 'EmotionsModule', questioning: 'QuestioningModule', recall: 'RecallModule', meditation: 'MeditationModule', brain: 'BrainModule', dialogue: 'DialogueModule', actions: 'ActionsModule', sharing: 'SharingModule' };
+    const APP_VERSION = 'v2.1.0';
+    // Direct module references — const declarations don't attach to window
+    const pageModules = {
+        emotions: EmotionsModule,
+        questioning: QuestioningModule,
+        recall: RecallModule,
+        meditation: MeditationModule,
+        brain: BrainModule,
+        dialogue: DialogueModule,
+        actions: ActionsModule,
+        sharing: SharingModule
+    };
     let currentPage = 'home';
 
     function initApp() {
@@ -25,12 +36,13 @@
             updateUserStatus();
             // Re-init current page module
             if (currentPage !== 'home') {
-                const modName = pageModules[currentPage];
-                if (modName && window[modName]?.init) window[modName].init();
+                const mod = pageModules[currentPage];
+                if (mod?.init) mod.init();
             }
         });
         window.addEventListener('authChanged', updateUserStatus);
         // Splash screen
+        showVersion();
         setTimeout(() => {
             document.getElementById('splash-screen').style.opacity = '0';
             setTimeout(() => {
@@ -135,8 +147,8 @@
         // Header title
         updateHeaderTitle();
         // Init module
-        const modName = pageModules[page];
-        if (modName && window[modName]?.init) window[modName].init();
+        const mod = pageModules[page];
+        if (mod?.init) mod.init();
         // Scroll to top
         document.getElementById('page-container').scrollTop = 0;
     }
@@ -199,11 +211,13 @@
     }
 
     function initModules() {
-        Object.keys(pageModules).forEach(key => {
-            const modName = pageModules[key];
-            // Only init emotions since it has static filter buttons
-            if (key === 'emotions' && window[modName]?.init) window[modName].init();
-        });
+        // Init emotions on startup since it has static filter buttons
+        if (pageModules.emotions?.init) pageModules.emotions.init();
+    }
+
+    function showVersion() {
+        const el = document.getElementById('app-version');
+        if (el) el.textContent = APP_VERSION;
     }
 
     // Start

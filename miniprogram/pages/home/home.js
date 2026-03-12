@@ -50,6 +50,8 @@ Page({
             dailyLabel: i18n.t('dailyLabel'),
             dailyQuote,
             cards,
+            version: i18n.t('version'),
+            brandName: i18n.t('brandName'),
             langs: i18n.getSupported().map(l => ({ code: l, name: i18n.tLang('langName', l), active: l === i18n.getLang() }))
         });
     },

@@ -7,7 +7,9 @@ const auth = require('./utils/auth.js');
 App({
     globalData: {
         lang: 'zh',
-        session: null
+        session: null,
+        version: 'v2.1.0',
+        brandName: 'BeingYourself'
     },
 
     onLaunch() {

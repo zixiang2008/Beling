@@ -3,7 +3,7 @@
 <div align="center">
 
 ![觉察 App Banner](https://img.shields.io/badge/觉察-内在探索-7C3AED?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PHBhdGggZD0iTTEyIDZ2NmwzIDMiLz48L3N2Zz4=)
-![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.1.0-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 ![i18n](https://img.shields.io/badge/i18n-中文%20%7C%20EN%20%7C%20日本語%20%7C%20ไทย-orange?style=for-the-badge)
 
@@ -21,7 +21,7 @@
 
 ### 项目简介
 
-**觉察 · 内在探索** 是一款面向 T-Group、正念练习者与心理成长爱好者的 Web 应用。它整合了 **情绪词汇探索、深度自我发问、冥想引导、左右脑切换练习、觉察对话** 等多种心理觉察工具，帮助用户从"思考头脑"回归"感受身体"，真实触碰当下的内在状态。
+**觉察 · 内在探索 (BeingYourself)** 是一款面向正念练习者与心理成长爱好者的 Web + 小程序应用。它整合了 **情绪词汇探索、深度自我发问、冥想引导、左右脑切换练习、觉察对话** 等多种心理觉察工具，帮助用户从"思考头脑"回归"感受身体"，真实触碰当下的内在状态。
 
 > 🧘 *向内看，看见真实的自己*
 
@@ -32,7 +32,7 @@
 | **情绪罗盘** | 😊 | 探索 120+ 种情绪，了解每种情绪出现的场景与相处方式 |
 | **深度发问** | 🔍 | 多维度自我探索问题表，引导清醒觉察 |
 | **24h 回忆** | ⏰ | 有结构地回顾过去 24 小时的真实感受与反应 |
-| **冥想空间** | 🧘 | 呼吸引导 + 冥想计时器，T-Group 从这里开始 |
+| **冥想空间** | 🧘 | 呼吸引导 + 冥想计时器，觉察练习从这里开始 |
 | **感受模式** | 🧠 | 帮助从左脑分析状态切换到右脑体验感受状态 |
 | **觉察对话** | 💬 | 与内建多角色 AI 进行深度内在对话（需登录） |
 | **行动建议** | 🏃 | 推荐有助于安静头脑的身体活动 |
@@ -118,7 +118,7 @@ TGroup/
 
 ### About
 
-**Self-Awareness Practice** is a web application designed for T-Group participants, mindfulness practitioners, and personal development enthusiasts. It combines multiple psychological awareness tools — including **emotion vocabulary exploration, deep self-inquiry, guided meditation, brain-hemisphere switching, and inner dialogue** — to help users shift from "thinking mind" back to "feeling body" and authentically connect with their present inner state.
+**Self-Awareness Practice (BeingYourself)** is a web + mini-program application designed for mindfulness practitioners and personal development enthusiasts. It combines multiple psychological awareness tools — including **emotion vocabulary exploration, deep self-inquiry, guided meditation, brain-hemisphere switching, and inner dialogue** — to help users shift from "thinking mind" back to "feeling body" and authentically connect with their present inner state.
 
 > 🧘 *Look within, and see your authentic self*
 
@@ -129,7 +129,7 @@ TGroup/
 | **Emotion Compass** | 😊 | Explore 120+ emotions, understand their triggers and how to be with them |
 | **Deep Inquiry** | 🔍 | Multi-dimensional self-reflection questions for conscious awareness |
 | **24h Recall** | ⏰ | Structured review of your genuine feelings over the past 24 hours |
-| **Meditation Space** | 🧘 | Breathing guide + meditation timer, the starting point of T-Group |
+| **Meditation Space** | 🧘 | Breathing guide + meditation timer, the starting point of awareness practice |
 | **Feeling Mode** | 🧠 | Shift from left-brain analysis to right-brain experiential awareness |
 | **Inner Dialogue** | 💬 | Deep inner dialogue with built-in multi-persona AI characters (login required) |
 | **Action Suggestions** | 🏃 | Recommended physical activities to quiet the analytical mind |
@@ -230,6 +230,14 @@ This project is open source under the [MIT License](LICENSE). Free to use and ex
 - ✨ 新增 8 个模块级语言包
 - 🎨 升级至移动端优先的深色玻璃拟态设计
 
+### v2.1.0 — 2026-03-12
+- ✨ 品牌更名为 BeingYourself
+- ✨ 情绪罗盘扩充至 91 条（新增 24 条），全部免登录
+- ✨ 注册增设 3 级经验评估（experienced / beginner / none）
+- ✨ 对话深度按经验等级自动切换（温和/深度）
+- ✨ 新增身体感受词汇附录（108 个感受词汇 + 搜索）
+- ✨ 首页添加品牌标识与版本号显示
+
 ### v1.0.0 — 2026-03-10
 - 🎉 初始版本发布
 - 😊 情绪罗盘（120+ 情绪数据）
@@ -245,7 +253,7 @@ This project is open source under the [MIT License](LICENSE). Free to use and ex
 
 <div align="center">
 
-**Made with 💜 for inner awareness & T-Group practice**
+**Made with 💜 by BeingYourself — for inner awareness practice**
 
 *如果这个工具对你有帮助，欢迎 ⭐ Star 支持！*
 

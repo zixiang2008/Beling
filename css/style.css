@@ -604,6 +604,22 @@ textarea {
     z-index: 1;
 }
 
+/* Version Bar */
+.app-version-bar {
+    text-align: center;
+    padding: 18px 0 4px;
+}
+
+.app-version-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+}
+
 /* ---- Emotions Page ---- */
 .page-intro {
     margin-bottom: 16px;

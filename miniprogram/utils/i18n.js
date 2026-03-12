@@ -6,7 +6,7 @@ const STORAGE_KEY = 'sa_lang';
 
 const ui = {
     zh: {
-        appName: '觉察', splashTitle: '觉 察', splashSub: '向内看，看见真实的自己',
+        appName: '觉察', splashTitle: '觉 察', splashSub: '向内看，看见真实的自己', version: 'v2.1.0', brandName: 'BeingYourself',
         greeting: { morning: '早上好', noon: '中午好', afternoon: '下午好', evening: '晚上好' },
         greetingSuffix: '，你现在感觉怎么样？',
         pages: { home: '觉察', emotions: '情绪罗盘', questioning: '深度发问', recall: '24h 回忆', meditation: '冥想空间', brain: '感受模式', dialogue: '觉察对话', actions: '行动建议', sharing: '分享句式' },
@@ -15,7 +15,7 @@ const ui = {
             emotions: { title: '情绪罗盘', desc: '探索120+种情绪' },
             questioning: { title: '深度发问', desc: '多维度自我探索' },
             recall: { title: '24h 回忆', desc: '觉察过去24小时' },
-            meditation: { title: '冥想空间', desc: 'T-Group 从这里开始' },
+            meditation: { title: '冥想空间', desc: '觉察练习从这里开始' },
             brain: { title: '感受模式', desc: '从思考切换到感受' },
             dialogue: { title: '觉察对话', desc: '与内在角色对话' },
             actions: { title: '行动建议', desc: '用身体放下头脑' },
@@ -40,7 +40,7 @@ const ui = {
         langName: '中文'
     },
     en: {
-        appName: 'Awareness', splashTitle: 'Awareness', splashSub: 'Look within, see your authentic self',
+        appName: 'Awareness', splashTitle: 'Awareness', splashSub: 'Look within, see your authentic self', version: 'v2.1.0', brandName: 'BeingYourself',
         greeting: { morning: 'Good morning', noon: 'Good noon', afternoon: 'Good afternoon', evening: 'Good evening' },
         greetingSuffix: ', how are you feeling now?',
         pages: { home: 'Home', emotions: 'Emotions', questioning: 'Inquiry', recall: '24h Recall', meditation: 'Meditation', brain: 'Feeling Mode', dialogue: 'Inner Dialogue', actions: 'Action Tips', sharing: 'T-Language' },
@@ -49,7 +49,7 @@ const ui = {
             emotions: { title: 'Emotion Compass', desc: 'Explore 120+ emotions' },
             questioning: { title: 'Deep Inquiry', desc: 'Multi-dimensional self-exploration' },
             recall: { title: '24h Recall', desc: 'Reflect on the past 24 hours' },
-            meditation: { title: 'Meditation Space', desc: 'T-Group starts here' },
+            meditation: { title: 'Meditation Space', desc: 'Awareness practice starts here' },
             brain: { title: 'Feeling Mode', desc: 'Switch from thinking to feeling' },
             dialogue: { title: 'Inner Dialogue', desc: 'Talk with inner personas' },
             actions: { title: 'Action Tips', desc: 'Let your body quiet the mind' },
@@ -74,7 +74,7 @@ const ui = {
         langName: 'English'
     },
     ja: {
-        appName: '気づき', splashTitle: '気づき', splashSub: '内側を見つめ、本当の自分に出会う',
+        appName: '気づき', splashTitle: '気づき', splashSub: '内側を見つめ、本当の自分に出会う', version: 'v2.1.0', brandName: 'BeingYourself',
         greeting: { morning: 'おはようございます', noon: 'こんにちは', afternoon: 'こんにちは', evening: 'こんばんは' },
         greetingSuffix: '、今の気持ちはいかがですか？',
         pages: { home: 'ホーム', emotions: '感情コンパス', questioning: '深い問い', recall: '24時間振り返り', meditation: '瞑想空間', brain: '感覚モード', dialogue: '内なる対話', actions: 'アクション', sharing: 'T言語' },
@@ -83,7 +83,7 @@ const ui = {
             emotions: { title: '感情コンパス', desc: '120+の感情を探索' },
             questioning: { title: '深い問い', desc: '多次元の自己探求' },
             recall: { title: '24時間振り返り', desc: '過去24時間を振り返る' },
-            meditation: { title: '瞑想空間', desc: 'T-Groupはここから' },
+            meditation: { title: '瞑想空間', desc: '気づきの練習はここから' },
             brain: { title: '感覚モード', desc: '思考から感覚へ' },
             dialogue: { title: '内なる対話', desc: '内なるペルソナと対話' },
             actions: { title: 'アクション', desc: '体で心を静める' },
@@ -108,7 +108,7 @@ const ui = {
         langName: '日本語'
     },
     th: {
-        appName: 'การตระหนักรู้', splashTitle: 'ตระหนักรู้', splashSub: 'มองเข้าไปข้างใน พบตัวตนที่แท้จริง',
+        appName: 'การตระหนักรู้', splashTitle: 'ตระหนักรู้', splashSub: 'มองเข้าไปข้างใน พบตัวตนที่แท้จริง', version: 'v2.1.0', brandName: 'BeingYourself',
         greeting: { morning: 'สวัสดีตอนเช้า', noon: 'สวัสดีตอนเที่ยง', afternoon: 'สวัสดีตอนบ่าย', evening: 'สวัสดีตอนเย็น' },
         greetingSuffix: ' ตอนนี้คุณรู้สึกอย่างไร?',
         pages: { home: 'หน้าแรก', emotions: 'เข็มทิศอารมณ์', questioning: 'คำถามลึก', recall: 'ย้อนดู 24 ชม.', meditation: 'พื้นที่สมาธิ', brain: 'โหมดรับรู้', dialogue: 'บทสนทนาภายใน', actions: 'คำแนะนำ', sharing: 'ภาษา T' },
@@ -117,7 +117,7 @@ const ui = {
             emotions: { title: 'เข็มทิศอารมณ์', desc: 'สำรวจ 120+ อารมณ์' },
             questioning: { title: 'คำถามลึก', desc: 'สำรวจตนเองหลายมิติ' },
             recall: { title: 'ย้อนดู 24 ชม.', desc: 'ตระหนักรู้ 24 ชม.ที่ผ่านมา' },
-            meditation: { title: 'พื้นที่สมาธิ', desc: 'T-Group เริ่มที่นี่' },
+            meditation: { title: 'พื้นที่สมาธิ', desc: 'เริ่มฝึกตระหนักรู้ที่นี่' },
             brain: { title: 'โหมดรับรู้', desc: 'เปลี่ยนจากคิดเป็นรู้สึก' },
             dialogue: { title: 'บทสนทนาภายใน', desc: 'สนทนากับตัวตนภายใน' },
             actions: { title: 'คำแนะนำ', desc: 'ใช้ร่างกายปล่อยวางจิตใจ' },

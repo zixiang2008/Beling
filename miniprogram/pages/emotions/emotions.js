@@ -72,6 +72,33 @@ const emotionsDataZh = [
     { zh: '轻松', en: 'lighthearted', type: 'positive', intensity: 2, scene: '没有负担的感觉', suggestions: ['做有趣的事', '和朋友相聚', '保持这份轻盈', '运动放大轻松'] },
     { zh: '活力', en: 'energized', type: 'positive', intensity: 4, scene: '充满能量和动力', suggestions: ['趁有能量完成重要任务', '运动放大活力', '分享能量', '记住活力的来源'] },
     { zh: '连接感', en: 'connected', type: 'positive', intensity: 3, scene: '与他人或世界产生共鸣', suggestions: ['珍惜这份连接', '表达你的感受', '与更多人创造连接', '连接是人类本能需求'] },
+    // === 补充：不舒服的感受 (negative) ===
+    { zh: '窒息感', en: 'suffocated', type: 'negative', intensity: 5, scene: '被过度控制或束缚', suggestions: ['离开让你喘不过气的环境', '做深呼吸', '表达你的边界', '你有权保护自己的空间'] },
+    { zh: '自卑', en: 'inferior', type: 'negative', intensity: 3, scene: '觉得自己不够好', suggestions: ['列出你的3个优点', '自卑不等于事实', '停止和别人比较', '你只需要做自己'] },
+    { zh: '怨恨', en: 'resentful', type: 'negative', intensity: 4, scene: '长期的不公平感积累', suggestions: ['承认怨恨的存在', '写下你的感受', '考虑是否需要沟通', '放下是为了自己'] },
+    { zh: '恐惧', en: 'fearful', type: 'negative', intensity: 4, scene: '面对未知的威胁', suggestions: ['识别恐惧的具体对象', '恐惧是保护机制', '从最小的一步开始', '寻求支持和陪伴'] },
+    { zh: '厌倦', en: 'weary', type: 'negative', intensity: 2, scene: '对重复的事物失去兴趣', suggestions: ['给自己放一天假', '尝试改变日常路线', '找一件从未做过的事', '厌倦是改变的信号'] },
+    { zh: '受伤', en: 'hurt', type: 'negative', intensity: 4, scene: '被信任的人伤害', suggestions: ['允许自己的感受', '你的痛苦是真实的', '不急着原谅', '寻求安全的支持'] },
+    { zh: '挫败', en: 'defeated', type: 'negative', intensity: 4, scene: '反复努力仍然失败', suggestions: ['休息不是放弃', '换一种方法再试', '找人聊聊你的计划', '每次失败都是数据'] },
+    { zh: '多疑', en: 'suspicious', type: 'negative', intensity: 3, scene: '难以信任他人', suggestions: ['问自己这个怀疑有依据吗', '慢慢建立信任', '过往的经历不代表未来', '信任从小事开始'] },
+    // === 补充：中性感受 (neutral) ===
+    { zh: '困惑', en: 'confused', type: 'neutral', intensity: 2, scene: '信息太多无法理清', suggestions: ['写下你知道的事实', '一次只思考一个问题', '困惑是学习的开始', '找人帮你梳理'] },
+    { zh: '疏离', en: 'detached', type: 'neutral', intensity: 2, scene: '感觉与周围脱节', suggestions: ['这可能是保护机制', '做一件和感官有关的事', '触摸实体物品', '不评判这种状态'] },
+    { zh: '谨慎', en: 'cautious', type: 'neutral', intensity: 2, scene: '面对不确定的情况', suggestions: ['谨慎是智慧', '收集更多信息', '相信你的判断', '行动时保持觉察'] },
+    { zh: '清醒', en: 'lucid', type: 'neutral', intensity: 2, scene: '头脑特别清晰', suggestions: ['利用这个状态处理重要事', '记录你的想法', '清醒是一种礼物', '保持觉察'] },
+    { zh: '期待', en: 'expectant', type: 'neutral', intensity: 3, scene: '等待某件好事发生', suggestions: ['享受期待的过程', '做好准备', '期待也可能带来焦虑', '活在当下'] },
+    { zh: '惊愕', en: 'stunned', type: 'neutral', intensity: 4, scene: '突然得知意外的消息', suggestions: ['给自己时间反应', '不急着做决定', '深呼吸几次', '和信任的人谈谈'] },
+    { zh: '忐忑', en: 'apprehensive', type: 'neutral', intensity: 3, scene: '面对即将到来的挑战', suggestions: ['忐忑说明你在乎', '做充分的准备', '想象最好的结果', '深呼吸稳定自己'] },
+    { zh: '恍惚', en: 'dazed', type: 'neutral', intensity: 2, scene: '精神不集中的状态', suggestions: ['喝一杯水', '站起来活动', '做3次深呼吸', '这可能是需要休息的信号'] },
+    // === 补充：舒服的感受 (positive) ===
+    { zh: '自在', en: 'at ease', type: 'positive', intensity: 2, scene: '不需要伪装的状态', suggestions: ['记住这种感觉', '和让你自在的人多相处', '自在是最好的状态', '保持真实'] },
+    { zh: '欣慰', en: 'gratified', type: 'positive', intensity: 3, scene: '看到努力有了回报', suggestions: ['为自己骄傲', '停下来享受这一刻', '和重要的人分享', '记住这份满足'] },
+    { zh: '振奋', en: 'inspired', type: 'positive', intensity: 4, scene: '被某件事深深激励', suggestions: ['立刻记下你的灵感', '趁热行动', '把灵感转化为计划', '分享你的热情'] },
+    { zh: '陶醉', en: 'enchanted', type: 'positive', intensity: 3, scene: '沉浸在美好的事物中', suggestions: ['完全沉浸其中', '不要急着离开', '用心记住这个瞬间', '生活需要这样的时刻'] },
+    { zh: '心安', en: 'reassured', type: 'positive', intensity: 2, scene: '悬着的心落下来了', suggestions: ['深深地呼出一口气', '感受身体的放松', '告诉关心你的人', '心安是最好的礼物'] },
+    { zh: '通透', en: 'clarity', type: 'positive', intensity: 3, scene: '突然想明白了一件事', suggestions: ['写下你的领悟', '通透后去行动', '和别人分享你的发现', '珍惜这份清明'] },
+    { zh: '自由', en: 'liberated', type: 'positive', intensity: 4, scene: '卸下了长久的束缚', suggestions: ['展开双臂深呼吸', '做一件一直想做的事', '自由是你值得拥有的', '感受身体的轻盈'] },
+    { zh: '从容', en: 'composed', type: 'positive', intensity: 2, scene: '面对困难也不慌乱', suggestions: ['从容是修炼的结果', '保持当前的节奏', '你的沉稳影响着周围的人', '在从容中做决策'] },
 ];
 
 function getEmotionName(e) {
