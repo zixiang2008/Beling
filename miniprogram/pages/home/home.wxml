@@ -1,0 +1,31 @@
+<!-- 首页 - home.wxml -->
+<view class="container page-content">
+  <!-- 呼吸动画 -->
+  <view class="breath-anim">
+    <view class="breath-ring ring-1"></view>
+    <view class="breath-ring ring-2"></view>
+    <view class="breath-ring ring-3"></view>
+    <view class="breath-dot"></view>
+  </view>
+
+  <!-- 问候语 -->
+  <view class="greeting">{{greeting}}</view>
+
+  <!-- 每日觉察语 -->
+  <view class="daily-card">
+    <view style="flex:1;">
+      <view class="daily-label">{{dailyLabel}}</view>
+      <view class="daily-text">{{dailyQuote}}</view>
+    </view>
+    <button class="daily-refresh" bind:tap="refreshQuote">🔄</button>
+  </view>
+
+  <!-- 功能入口网格 -->
+  <view class="home-grid">
+    <view class="home-card" wx:for="{{cards}}" wx:key="page" bind:tap="navigateTo" data-page="{{item.page}}">
+      <view class="home-card-icon">{{item.icon}}</view>
+      <view class="home-card-title">{{item.title}}</view>
+      <view class="home-card-desc">{{item.desc}}</view>
+    </view>
+  </view>
+</view>

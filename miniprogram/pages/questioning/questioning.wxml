@@ -1,0 +1,11 @@
+<!-- 深度发问 - questioning.wxml -->
+<view class="container page-content">
+  <view class="module-intro">
+    <view class="section-title">{{title}}</view>
+    <view class="section-desc">{{intro}}</view>
+  </view>
+  <view class="question-card" wx:for="{{questions}}" wx:key="index">
+    <view class="question-text">{{item.q}}</view>
+    <textarea class="answer-area" placeholder="{{writePlaceholder}}" value="{{item.answer}}" bindinput="onAnswer" data-index="{{index}}"></textarea>
+  </view>
+</view>

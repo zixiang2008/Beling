@@ -1,0 +1,46 @@
+<!-- 分享句式 - sharing.wxml -->
+<view class="container page-content">
+  <view class="module-intro">
+    <view class="section-title">{{title}}</view>
+    <view class="section-desc">{{intro}}</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title" style="font-size:30rpx;">{{templateLabel}}</view>
+    <view class="template-row">
+      <view class="template-label">{{whenLabel}}</view>
+      <input class="template-input" placeholder="{{whenPlaceholder}}" value="{{formWhen}}" bindinput="onFormInput" data-field="formWhen" />
+    </view>
+    <view class="template-row">
+      <view class="template-label">{{interpretLabel}}</view>
+      <input class="template-input" placeholder="{{interpretPlaceholder}}" value="{{formInterpret}}" bindinput="onFormInput" data-field="formInterpret" />
+    </view>
+    <view class="template-row">
+      <view class="template-label">{{feelLabel}}</view>
+      <input class="template-input" placeholder="{{feelPlaceholder}}" value="{{formFeel}}" bindinput="onFormInput" data-field="formFeel" />
+    </view>
+    <view class="template-row">
+      <view class="template-label">{{wantLabel}}</view>
+      <input class="template-input" placeholder="{{wantPlaceholder}}" value="{{formWant}}" bindinput="onFormInput" data-field="formWant" />
+    </view>
+    <button class="btn-primary" style="margin-top:24rpx;" bind:tap="generate">{{generateBtn}}</button>
+
+    <view class="sharing-result" wx:if="{{result}}">
+      <view class="section-title" style="font-size:28rpx;">{{resultLabel}}</view>
+      <view class="sharing-output">{{result}}</view>
+      <button class="btn-secondary" style="margin-top:16rpx;" bind:tap="copyResult">{{copyBtn}}</button>
+    </view>
+  </view>
+
+  <view style="margin-top:24rpx;">
+    <view class="section-title" style="font-size:30rpx;">{{examplesTitle}}</view>
+    <view class="example-card" wx:for="{{examples}}" wx:key="index">{{item}}</view>
+  </view>
+
+  <view style="margin-top:24rpx;">
+    <view class="tip-card" wx:for="{{tips}}" wx:key="index">
+      <view class="tip-title">{{item.title}}</view>
+      <view class="tip-desc">{{item.desc}}</view>
+    </view>
+  </view>
+</view>

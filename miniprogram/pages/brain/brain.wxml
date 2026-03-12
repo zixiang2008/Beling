@@ -1,0 +1,11 @@
+<!-- 感受模式 - brain.wxml -->
+<view class="container page-content">
+  <view class="module-intro">
+    <view class="section-title">{{title}}</view>
+    <view class="section-desc">{{intro}}</view>
+  </view>
+  <view class="card" wx:for="{{exercises}}" wx:key="index">
+    <view class="section-title" style="font-size:32rpx;">{{item.title}}</view>
+    <view class="section-desc">{{item.desc}}</view>
+  </view>
+</view>

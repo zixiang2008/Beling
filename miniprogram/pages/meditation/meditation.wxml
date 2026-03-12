@@ -1,0 +1,27 @@
+<!-- 冥想空间 - meditation.wxml -->
+<view class="container page-content">
+  <view class="meditation-intro" wx:if="{{phase === 'setup'}}">
+    <view class="section-title">{{title}}</view>
+    <view class="section-desc">{{intro}}</view>
+    <view class="duration-options">
+      <button class="duration-btn {{selectedMins === item ? 'active' : ''}}" wx:for="{{durations}}" wx:key="*this" bind:tap="selectDuration" data-mins="{{item}}">{{item}} min</button>
+    </view>
+    <button class="btn-primary" bind:tap="startMeditation">{{startBtn}}</button>
+  </view>
+
+  <view wx:if="{{phase === 'active'}}" style="text-align:center;padding-top:60rpx;">
+    <view class="meditation-timer">{{timerDisplay}}</view>
+    <view class="meditation-breath">{{breathText}}</view>
+    <view class="meditation-guide">{{guideText}}</view>
+    <view class="meditation-controls">
+      <button class="med-ctrl-btn btn-secondary" bind:tap="togglePause">{{isPaused ? resumeBtn : pauseBtn}}</button>
+      <button class="med-ctrl-btn btn-secondary" bind:tap="stopMeditation">{{stopBtn}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{phase === 'complete'}}" style="text-align:center;padding-top:80rpx;">
+    <view class="complete-icon">🙏</view>
+    <view class="complete-msg">{{completeMsg}}</view>
+    <button class="btn-primary" bind:tap="resetMeditation">{{returnBtn}}</button>
+  </view>
+</view>

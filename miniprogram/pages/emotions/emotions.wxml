@@ -1,0 +1,40 @@
+<!-- 情绪罗盘 - emotions.wxml -->
+<view class="container page-content">
+  <!-- 页面介绍 -->
+  <view class="module-intro">
+    <view class="section-desc">{{introText}}</view>
+    <view class="emotion-filters">
+      <button class="filter-btn {{currentFilter === 'all' ? 'active' : ''}}" bind:tap="setFilter" data-filter="all">{{filters.all}}</button>
+      <button class="filter-btn {{currentFilter === 'negative' ? 'active' : ''}}" bind:tap="setFilter" data-filter="negative">{{filters.negative}}</button>
+      <button class="filter-btn {{currentFilter === 'neutral' ? 'active' : ''}}" bind:tap="setFilter" data-filter="neutral">{{filters.neutral}}</button>
+      <button class="filter-btn {{currentFilter === 'positive' ? 'active' : ''}}" bind:tap="setFilter" data-filter="positive">{{filters.positive}}</button>
+    </view>
+  </view>
+
+  <!-- 情绪网格 -->
+  <view class="emotions-grid">
+    <view class="emotion-cell {{item.type}}" wx:for="{{filteredEmotions}}" wx:key="index" bind:tap="showDetail" data-index="{{item.origIndex}}">
+      <view class="emotion-zh">{{item.name}}</view>
+      <view class="emotion-en">{{item.en}}</view>
+      <view class="emotion-intensity">{{item.dots}}</view>
+    </view>
+  </view>
+
+  <!-- 详情弹窗 -->
+  <view class="emotion-modal" wx:if="{{showModal}}" bind:tap="closeModal">
+    <view class="emotion-modal-content" catch:tap="preventClose">
+      <button class="modal-close" bind:tap="closeModal">✕</button>
+      <view class="modal-emotion-name">{{detail.name}}</view>
+      <view class="modal-emotion-en">{{detail.en}} · {{detail.intensityLabel}} {{detail.dots}}</view>
+      <view class="modal-section-title">{{detail.sceneLabel}}</view>
+      <view class="modal-text">{{detail.scene}}</view>
+      <view class="modal-section-title">{{detail.suggestionsLabel}}</view>
+      <view class="suggestion-item" wx:for="{{detail.suggestions}}" wx:key="index" wx:for-item="sug">{{sug}}</view>
+      <view class="modal-section-title">{{detail.tagsLabel}}</view>
+      <view>
+        <text class="tag">{{detail.typeLabel}}</text>
+        <text class="tag">{{detail.intensityLabel}} {{detail.intensityValue}}/5</text>
+      </view>
+    </view>
+  </view>
+</view>

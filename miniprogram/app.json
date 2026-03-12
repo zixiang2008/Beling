@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/emotions/emotions",
+        "pages/questioning/questioning",
+        "pages/recall/recall",
+        "pages/meditation/meditation",
+        "pages/brain/brain",
+        "pages/dialogue/dialogue",
+        "pages/actions/actions",
+        "pages/sharing/sharing"
+    ],
+    "window": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#0a0a1a",
+        "backgroundTextStyle": "light",
+        "backgroundColorTop": "#0a0a1a",
+        "backgroundColorBottom": "#0a0a1a"
+    },
+    "tabBar": {
+        "color": "#6b7280",
+        "selectedColor": "#a78bfa",
+        "backgroundColor": "#111827",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "assets/icons/home.png",
+                "selectedIconPath": "assets/icons/home-active.png"
+            },
+            {
+                "pagePath": "pages/emotions/emotions",
+                "text": "情绪",
+                "iconPath": "assets/icons/emotion.png",
+                "selectedIconPath": "assets/icons/emotion-active.png"
+            },
+            {
+                "pagePath": "pages/meditation/meditation",
+                "text": "冥想",
+                "iconPath": "assets/icons/meditation.png",
+                "selectedIconPath": "assets/icons/meditation-active.png"
+            },
+            {
+                "pagePath": "pages/dialogue/dialogue",
+                "text": "对话",
+                "iconPath": "assets/icons/dialogue.png",
+                "selectedIconPath": "assets/icons/dialogue-active.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

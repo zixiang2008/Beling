@@ -1,0 +1,897 @@
+/* ============================================
+   觉察 · 内在探索 — 全局样式 (WXSS)
+   ============================================ */
+
+/* === CSS 变量替代（小程序不支持 :root，使用直接值） === */
+/* --bg-primary: #0a0a1a */
+/* --bg-secondary: rgba(17,24,39,0.95) */
+/* --bg-card: rgba(31,41,55,0.6) */
+/* --text-primary: #f3f4f6 */
+/* --text-secondary: #9ca3af */
+/* --text-accent: #a78bfa */
+/* --accent: #7c3aed */
+/* --border: rgba(107,114,128,0.2) */
+
+page {
+  background: #0a0a1a;
+  color: #f3f4f6;
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+/* === 通用布局 === */
+.container {
+  padding: 30rpx;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* === 卡片样式 === */
+.card {
+  background: rgba(31,41,55,0.6);
+  border: 1rpx solid rgba(107,114,128,0.2);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  backdrop-filter: blur(10px);
+  margin-bottom: 24rpx;
+}
+
+/* === 按钮样式 === */
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border: none;
+  border-radius: 20rpx;
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary::after {
+  border: none;
+}
+
+.btn-secondary {
+  background: rgba(31,41,55,0.8);
+  color: #a78bfa;
+  border: 1rpx solid rgba(124,58,237,0.3);
+  border-radius: 20rpx;
+  padding: 16rpx 32rpx;
+  font-size: 26rpx;
+}
+
+.btn-secondary::after {
+  border: none;
+}
+
+/* === 标题文字 === */
+.section-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-bottom: 16rpx;
+}
+
+.section-desc {
+  font-size: 26rpx;
+  color: #9ca3af;
+  margin-bottom: 30rpx;
+}
+
+/* === 首页呼吸动画 === */
+.breath-anim {
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+  margin: 60rpx auto 40rpx;
+}
+
+.breath-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2rpx solid rgba(124,58,237,0.3);
+}
+
+.ring-1 { width: 160rpx; height: 160rpx; animation: breathPulse 4s infinite ease-in-out; }
+.ring-2 { width: 120rpx; height: 120rpx; animation: breathPulse 4s infinite ease-in-out 0.5s; }
+.ring-3 { width: 80rpx; height: 80rpx; animation: breathPulse 4s infinite ease-in-out 1s; }
+
+.breath-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rpx;
+  height: 20rpx;
+  background: #a78bfa;
+  border-radius: 50%;
+  box-shadow: 0 0 20rpx rgba(167,139,250,0.5);
+}
+
+@keyframes breathPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+}
+
+/* === 首页问候 === */
+.greeting {
+  text-align: center;
+  font-size: 34rpx;
+  color: #d1d5db;
+  margin-bottom: 40rpx;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+/* === 每日觉察语卡片 === */
+.daily-card {
+  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(167,139,250,0.05));
+  border: 1rpx solid rgba(124,58,237,0.2);
+  border-radius: 20rpx;
+  padding: 24rpx 30rpx;
+  margin-bottom: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daily-label {
+  font-size: 22rpx;
+  color: #a78bfa;
+  margin-bottom: 8rpx;
+}
+
+.daily-text {
+  font-size: 28rpx;
+  color: #e5e7eb;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.daily-refresh {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  padding: 0;
+  margin: 0;
+}
+
+.daily-refresh::after { border: none; }
+
+/* === 功能卡片网格 === */
+.home-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+  margin-top: 10rpx;
+}
+
+.home-card {
+  width: calc(50% - 10rpx);
+  background: rgba(31,41,55,0.5);
+  border: 1rpx solid rgba(107,114,128,0.15);
+  border-radius: 24rpx;
+  padding: 28rpx 24rpx;
+  text-align: center;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.home-card-icon {
+  font-size: 52rpx;
+  margin-bottom: 12rpx;
+}
+
+.home-card-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 6rpx;
+}
+
+.home-card-desc {
+  font-size: 22rpx;
+  color: #9ca3af;
+}
+
+/* === 情绪罗盘 === */
+.emotion-filters {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10rpx 24rpx;
+  border-radius: 40rpx;
+  font-size: 24rpx;
+  background: rgba(31,41,55,0.6);
+  color: #9ca3af;
+  border: 1rpx solid rgba(107,114,128,0.2);
+}
+
+.filter-btn::after { border: none; }
+
+.filter-btn.active {
+  background: rgba(124,58,237,0.2);
+  color: #a78bfa;
+  border-color: rgba(124,58,237,0.4);
+}
+
+.emotions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.emotion-cell {
+  width: calc(33.33% - 12rpx);
+  background: rgba(31,41,55,0.4);
+  border: 1rpx solid rgba(107,114,128,0.15);
+  border-radius: 16rpx;
+  padding: 20rpx 12rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.emotion-cell.negative { border-left: 4rpx solid #ef4444; }
+.emotion-cell.positive { border-left: 4rpx solid #22c55e; }
+.emotion-cell.neutral { border-left: 4rpx solid #eab308; }
+
+.emotion-zh {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.emotion-en {
+  font-size: 20rpx;
+  color: #9ca3af;
+  margin-top: 4rpx;
+}
+
+.emotion-intensity {
+  font-size: 16rpx;
+  color: #a78bfa;
+  margin-top: 6rpx;
+  letter-spacing: 2rpx;
+}
+
+/* === 情绪详情弹窗 === */
+.emotion-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.emotion-modal-content {
+  width: 85%;
+  max-height: 80vh;
+  background: rgba(17,24,39,0.98);
+  border: 1rpx solid rgba(107,114,128,0.3);
+  border-radius: 28rpx;
+  padding: 40rpx;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20rpx;
+  right: 24rpx;
+  font-size: 36rpx;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  padding: 10rpx;
+}
+
+.modal-close::after { border: none; }
+
+.modal-emotion-name {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+
+.modal-emotion-en {
+  font-size: 24rpx;
+  color: #a78bfa;
+  margin-top: 8rpx;
+}
+
+.modal-section-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #d1d5db;
+  margin: 28rpx 0 12rpx;
+}
+
+.modal-text {
+  font-size: 26rpx;
+  color: #9ca3af;
+  line-height: 1.8;
+}
+
+.suggestion-item {
+  padding: 12rpx 0;
+  font-size: 26rpx;
+  color: #d1d5db;
+  border-bottom: 1rpx solid rgba(107,114,128,0.1);
+}
+
+.tag {
+  display: inline-block;
+  padding: 6rpx 16rpx;
+  background: rgba(124,58,237,0.15);
+  color: #a78bfa;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  margin-right: 12rpx;
+  margin-top: 8rpx;
+}
+
+/* === 冥想空间 === */
+.meditation-intro {
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.duration-options {
+  display: flex;
+  justify-content: center;
+  gap: 20rpx;
+  margin: 30rpx 0;
+}
+
+.duration-btn {
+  padding: 16rpx 28rpx;
+  border-radius: 20rpx;
+  background: rgba(31,41,55,0.6);
+  color: #9ca3af;
+  border: 1rpx solid rgba(107,114,128,0.2);
+  font-size: 26rpx;
+}
+
+.duration-btn::after { border: none; }
+
+.duration-btn.active {
+  background: rgba(124,58,237,0.2);
+  color: #a78bfa;
+  border-color: rgba(124,58,237,0.4);
+}
+
+.meditation-timer {
+  text-align: center;
+  font-size: 96rpx;
+  font-weight: 200;
+  color: #f3f4f6;
+  letter-spacing: 8rpx;
+  margin: 40rpx 0;
+}
+
+.meditation-breath {
+  text-align: center;
+  font-size: 36rpx;
+  color: #a78bfa;
+  margin: 20rpx 0;
+  min-height: 48rpx;
+}
+
+.meditation-guide {
+  text-align: center;
+  font-size: 28rpx;
+  color: #9ca3af;
+  font-style: italic;
+  min-height: 40rpx;
+  margin: 20rpx 0;
+}
+
+.meditation-controls {
+  display: flex;
+  justify-content: center;
+  gap: 24rpx;
+  margin-top: 40rpx;
+}
+
+.med-ctrl-btn {
+  padding: 16rpx 36rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+
+.complete-icon {
+  text-align: center;
+  font-size: 80rpx;
+  margin: 40rpx 0 20rpx;
+}
+
+.complete-msg {
+  text-align: center;
+  font-size: 30rpx;
+  color: #d1d5db;
+  margin-bottom: 30rpx;
+}
+
+/* === 觉察对话 === */
+.character-cards {
+  margin-top: 24rpx;
+}
+
+.character-card {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  background: rgba(31,41,55,0.5);
+  border: 1rpx solid rgba(107,114,128,0.15);
+  border-radius: 20rpx;
+  margin-bottom: 16rpx;
+}
+
+.character-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.character-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.character-desc {
+  font-size: 24rpx;
+  color: #9ca3af;
+  margin-top: 6rpx;
+}
+
+.character-tags {
+  display: flex;
+  gap: 8rpx;
+  margin-top: 8rpx;
+  flex-wrap: wrap;
+}
+
+.character-tag {
+  font-size: 20rpx;
+  color: #a78bfa;
+  background: rgba(124,58,237,0.1);
+  padding: 4rpx 12rpx;
+  border-radius: 12rpx;
+}
+
+/* === 聊天视图 === */
+.chat-view {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120rpx);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20rpx;
+}
+
+.chat-bubble {
+  margin-bottom: 20rpx;
+  max-width: 80%;
+}
+
+.chat-bubble.bot {
+  align-self: flex-start;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.chat-bubble-name {
+  font-size: 22rpx;
+  color: #9ca3af;
+  margin-bottom: 6rpx;
+}
+
+.chat-bubble-content {
+  padding: 20rpx 24rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.chat-bubble.bot .chat-bubble-content {
+  background: rgba(31,41,55,0.7);
+  color: #e5e7eb;
+  border-top-left-radius: 4rpx;
+}
+
+.chat-bubble.user .chat-bubble-content {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border-top-right-radius: 4rpx;
+}
+
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+  margin-top: 16rpx;
+}
+
+.chat-option-btn {
+  background: rgba(124,58,237,0.1);
+  border: 1rpx solid rgba(124,58,237,0.3);
+  border-radius: 16rpx;
+  padding: 16rpx 20rpx;
+  color: #a78bfa;
+  font-size: 26rpx;
+  text-align: left;
+}
+
+.chat-option-btn::after { border: none; }
+
+.chat-input-bar {
+  display: flex;
+  gap: 16rpx;
+  padding: 16rpx 24rpx;
+  background: rgba(17,24,39,0.95);
+  border-top: 1rpx solid rgba(107,114,128,0.2);
+}
+
+.chat-input {
+  flex: 1;
+  background: rgba(31,41,55,0.6);
+  border: 1rpx solid rgba(107,114,128,0.2);
+  border-radius: 16rpx;
+  padding: 16rpx 20rpx;
+  color: #f3f4f6;
+  font-size: 28rpx;
+}
+
+.chat-send-btn {
+  width: 72rpx;
+  height: 72rpx;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+}
+
+.chat-send-btn::after { border: none; }
+
+/* === 深度发问 / 回忆 / 脑切换 / 行动 / 分享 通用样式 === */
+.module-intro {
+  text-align: center;
+  padding: 30rpx 0 20rpx;
+}
+
+.module-intro .section-title {
+  font-size: 38rpx;
+}
+
+.question-card {
+  background: rgba(31,41,55,0.5);
+  border: 1rpx solid rgba(107,114,128,0.15);
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.question-text {
+  font-size: 30rpx;
+  color: #e5e7eb;
+  line-height: 1.8;
+  margin-bottom: 16rpx;
+}
+
+.answer-area {
+  width: 100%;
+  min-height: 120rpx;
+  background: rgba(17,24,39,0.6);
+  border: 1rpx solid rgba(107,114,128,0.2);
+  border-radius: 12rpx;
+  padding: 16rpx;
+  color: #f3f4f6;
+  font-size: 26rpx;
+  box-sizing: border-box;
+}
+
+/* === 分享句式 === */
+.template-row {
+  margin-bottom: 20rpx;
+}
+
+.template-label {
+  font-size: 26rpx;
+  color: #a78bfa;
+  margin-bottom: 8rpx;
+}
+
+.template-input {
+  width: 100%;
+  background: rgba(17,24,39,0.6);
+  border: 1rpx solid rgba(107,114,128,0.2);
+  border-radius: 12rpx;
+  padding: 16rpx;
+  color: #f3f4f6;
+  font-size: 26rpx;
+  box-sizing: border-box;
+}
+
+.sharing-result {
+  background: rgba(124,58,237,0.1);
+  border: 1rpx solid rgba(124,58,237,0.2);
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-top: 24rpx;
+}
+
+.sharing-output {
+  font-size: 28rpx;
+  color: #e5e7eb;
+  line-height: 1.8;
+}
+
+.example-card {
+  background: rgba(31,41,55,0.4);
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  margin-bottom: 12rpx;
+  font-size: 26rpx;
+  color: #d1d5db;
+}
+
+.tip-card {
+  background: rgba(31,41,55,0.3);
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.tip-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #a78bfa;
+  margin-bottom: 8rpx;
+}
+
+.tip-desc {
+  font-size: 24rpx;
+  color: #9ca3af;
+}
+
+/* === 自定义导航栏 === */
+.custom-nav {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 24rpx;
+  background: rgba(10,10,26,0.95);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-back {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.nav-back::after { border: none; }
+
+.nav-title {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.nav-right {
+  width: 60rpx;
+}
+
+/* === 语言选择器 === */
+.lang-selector {
+  position: relative;
+}
+
+.lang-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  padding: 0;
+  font-size: 28rpx;
+}
+
+.lang-btn::after { border: none; }
+
+.lang-dropdown {
+  position: absolute;
+  top: 70rpx;
+  right: 0;
+  background: rgba(17,24,39,0.98);
+  border: 1rpx solid rgba(107,114,128,0.3);
+  border-radius: 16rpx;
+  overflow: hidden;
+  z-index: 200;
+  min-width: 200rpx;
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 20rpx 30rpx;
+  background: none;
+  border: none;
+  border-bottom: 1rpx solid rgba(107,114,128,0.1);
+  color: #d1d5db;
+  font-size: 26rpx;
+  text-align: left;
+}
+
+.lang-option::after { border: none; }
+
+.lang-option.active {
+  color: #a78bfa;
+  background: rgba(124,58,237,0.1);
+}
+
+/* === 登录弹窗 === */
+.auth-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.auth-content {
+  position: relative;
+  width: 80%;
+  background: rgba(17,24,39,0.98);
+  border: 1rpx solid rgba(107,114,128,0.3);
+  border-radius: 28rpx;
+  padding: 50rpx 40rpx;
+  text-align: center;
+}
+
+.auth-icon {
+  font-size: 72rpx;
+  margin-bottom: 20rpx;
+}
+
+.auth-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-bottom: 12rpx;
+}
+
+.auth-desc {
+  font-size: 26rpx;
+  color: #9ca3af;
+  margin-bottom: 30rpx;
+}
+
+.auth-input {
+  width: 100%;
+  background: rgba(31,41,55,0.6);
+  border: 1rpx solid rgba(107,114,128,0.3);
+  border-radius: 12rpx;
+  padding: 20rpx;
+  color: #f3f4f6;
+  font-size: 28rpx;
+  margin-bottom: 16rpx;
+  box-sizing: border-box;
+}
+
+.auth-error {
+  font-size: 24rpx;
+  color: #ef4444;
+  min-height: 36rpx;
+  margin-bottom: 12rpx;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+.auth-switch {
+  background: none;
+  border: none;
+  color: #a78bfa;
+  font-size: 24rpx;
+  padding: 12rpx;
+}
+
+.auth-switch::after { border: none; }
+
+/* === 用户状态 === */
+.user-badge {
+  background: rgba(124,58,237,0.2);
+  color: #a78bfa;
+  padding: 6rpx 16rpx;
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  margin-right: 12rpx;
+}
+
+/* === 页面间距（为自定义导航栏留空间） === */
+.page-content {
+  padding-top: 20rpx;
+}
+
+/* === 更多页面入口 === */
+.more-list {
+  padding: 20rpx;
+}
+
+.more-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 20rpx;
+  background: rgba(31,41,55,0.5);
+  border: 1rpx solid rgba(107,114,128,0.15);
+  border-radius: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.more-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.more-text {
+  font-size: 30rpx;
+  color: #f3f4f6;
+  font-weight: 500;
+}

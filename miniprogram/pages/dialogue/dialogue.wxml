@@ -1,0 +1,41 @@
+<!-- 觉察对话 - dialogue.wxml -->
+<view class="container page-content">
+  <!-- 角色选择 -->
+  <view wx:if="{{!selectedCharacter}}">
+    <view class="module-intro">
+      <view class="section-title">{{selectTitle}}</view>
+      <view class="section-desc">{{selectDesc}}</view>
+    </view>
+    <view class="character-cards">
+      <view class="character-card" wx:for="{{characters}}" wx:key="id" bind:tap="selectCharacter" data-id="{{item.id}}">
+        <view class="character-avatar" style="background:{{item.bg}}">{{item.emoji}}</view>
+        <view style="flex:1;">
+          <view class="character-name">{{item.name}}</view>
+          <view class="character-desc">{{item.desc}}</view>
+          <view class="character-tags">
+            <text class="character-tag" wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 聊天视图 -->
+  <view class="chat-view" wx:if="{{selectedCharacter}}">
+    <scroll-view class="chat-messages" scroll-y scroll-into-view="{{scrollTo}}" enhanced show-scrollbar="{{false}}">
+      <block wx:for="{{chatHistory}}" wx:key="index">
+        <view class="chat-bubble {{item.role}}" id="msg-{{index}}">
+          <view class="chat-bubble-name" wx:if="{{item.role === 'bot'}}">{{selectedCharacter.emoji}} {{selectedCharacter.name}}</view>
+          <view class="chat-bubble-content">{{item.text}}</view>
+        </view>
+        <view class="chat-options" wx:if="{{item.role === 'bot' && item.options.length > 0 && index === chatHistory.length - 1}}">
+          <button class="chat-option-btn" wx:for="{{item.options}}" wx:key="next" wx:for-item="opt" bind:tap="selectOption" data-next="{{opt.next}}" data-text="{{opt.text}}">{{opt.text}}</button>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="chat-input-bar">
+      <input class="chat-input" value="{{inputText}}" placeholder="{{sendPlaceholder}}" bindinput="onInput" bindconfirm="sendMessage" />
+      <button class="chat-send-btn" bind:tap="sendMessage">➤</button>
+    </view>
+  </view>
+</view>
