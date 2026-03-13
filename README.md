@@ -11,7 +11,7 @@
 
 **A mindfulness tool for deep inner self-awareness**
 
-[🌐 在线体验 Live Demo](https://selfawareness.netlify.app/) · [📖 使用指南 Guide](#功能模块) · [🤝 贡献 Contribute](#贡献--contributing)
+[🌐 在线体验 Live Demo](https://selfawareness.netlify.app/) · [📖 功能详解](#功能模块详解) · [🔐 显示策略](#显示策略--登录机制)
 
 </div>
 
@@ -21,30 +21,178 @@
 
 ### 项目简介
 
-**觉察 · 内在探索 (BeingYourself)** 是一款面向正念练习者与心理成长爱好者的 Web + 小程序应用。它整合了 **情绪词汇探索、深度自我发问、冥想引导、左右脑切换练习、觉察对话** 等多种心理觉察工具，帮助用户从"思考头脑"回归"感受身体"，真实触碰当下的内在状态。
+**觉察 · 内在探索 (BeingYourself)** 是一款面向正念练习者与心理成长爱好者的 Web + 微信小程序应用。它整合了 **情绪词汇探索、深度自我发问、冥想引导、左右脑切换练习、觉察对话** 等多种心理觉察工具，帮助用户从"思考头脑"回归"感受身体"，真实触碰当下的内在状态。
 
 > 🧘 *向内看，看见真实的自己*
 
-### 功能模块
+---
 
-| 模块 | 图标 | 说明 |
-|------|------|------|
-| **情绪罗盘** | 😊 | 探索 120+ 种情绪，了解每种情绪出现的场景与相处方式 |
-| **深度发问** | 🔍 | 多维度自我探索问题表，引导清醒觉察 |
-| **24h 回忆** | ⏰ | 有结构地回顾过去 24 小时的真实感受与反应 |
-| **冥想空间** | 🧘 | 呼吸引导 + 冥想计时器，觉察练习从这里开始 |
-| **感受模式** | 🧠 | 帮助从左脑分析状态切换到右脑体验感受状态 |
-| **觉察对话** | 💬 | 与内建多角色 AI 进行深度内在对话（需登录） |
-| **行动建议** | 🏃 | 推荐有助于安静头脑的身体活动 |
-| **分享句式** | 📝 | T 语言沟通模板，客观表达感受 |
+### 功能模块详解
 
-### v2.0 新特性
+#### 😊 情绪罗盘 — Emotion Compass
 
-- 🌍 **四语国际化** — 支持中文、English、日本語、ไทย 四种语言实时切换
-- 🔐 **用户认证系统** — 2 位汉字用户名 + 4 位 PIN 码，本地注册/登录
-- 🏠 **首页每日觉察语** — 每日推送正念短句，支持换一句
-- 📱 **底部导航 + 更多菜单** — 移动端友好的导航体验
-- 🎨 **启动画面** — 沉浸式呼吸动画开场
+| 属性 | 说明 |
+|------|------|
+| **情绪数量** | 91 种情绪词汇（负面 56 种、中性 6 种、正面 29 种） |
+| **强度标注** | 每个情绪 1–5 级强度（●/○ 可视化） |
+| **场景描述** | 每个情绪配有"这种感觉什么时候会出现"的场景说明 |
+| **相处建议** | 每个情绪提供 3–4 条具体可行的应对方式 |
+| **筛选功能** | 支持按类型筛选：全部 / 不舒服的感受 / 中性 / 舒服的感受 |
+| **访问权限** | 🟢 **免登录浏览**，点击查看详情需登录 |
+
+**核心价值**：很多人"有感觉但说不出来"，情绪罗盘提供一套完整的情绪词汇表，帮你精确命名内在状态——命名即疗愈。
+
+---
+
+#### 🔍 深度发问 — Deep Inquiry
+
+| 属性 | 说明 |
+|------|------|
+| **探索维度** | 5 大维度：身体、情绪、思想、关系、意义 |
+| **深度标注** | 每个问题标注 1–5 级深度 |
+| **答案存储** | 自动保存到本地，下次打开仍可回顾 |
+| **访问权限** | 🔐 **需登录**（未登录显示维度预览 + 登录引导） |
+
+**核心价值**：通过有结构的自我提问，引导用户觉察平时被忽略的内在层面。每个维度从浅到深，循序渐进。
+
+---
+
+#### ⏰ 24 小时回忆 — 24h Recall
+
+| 属性 | 说明 |
+|------|------|
+| **时间线结构** | 按时段回忆：清晨、上午、午间、下午、晚间、深夜 |
+| **引导提示** | 每个时段配有引导性问题 |
+| **答案存储** | 自动保存到本地 |
+| **访问权限** | 🔐 **需登录**（未登录显示时间线预览 + 登录引导） |
+
+**核心价值**：觉察是从回忆开始的。大多数人的日子在"自动驾驶"中度过，24h 回忆帮你重新"看见"每个时刻的真实感受。
+
+---
+
+#### 🧘 冥想空间 — Meditation Space
+
+| 属性 | 说明 |
+|------|------|
+| **时长选择** | 3 / 5 / 10 / 15 分钟 |
+| **呼吸引导** | 4 秒吸气 → 2 秒停留 → 6 秒呼气 → 2 秒停留 |
+| **文字引导** | 每 15 秒显示正念引导语 |
+| **控制功能** | 暂停 / 停止 / 完成庆祝 |
+| **访问权限** | 🟢 **免登录** |
+
+**核心价值**：提供一个简单的冥想空间，不需要下载任何 App。呼吸引导 + 引导语帮助建立冥想习惯。
+
+---
+
+#### 🧠 感受模式 — Feeling Mode (Brain Switch)
+
+| 属性 | 说明 |
+|------|------|
+| **对比展示** | 左脑（分析模式）vs 右脑（感受模式）可视化对比 |
+| **觉察练习** | 多种帮助从"思维"切换到"感受"的练习活动 |
+| **访问权限** | 🟢 **免登录** |
+
+**核心价值**：心理学告诉我们，很多人长期被"左脑分析"主导，与身体和情感失联。这个模块帮你有意识地做切换。
+
+---
+
+#### 💬 觉察对话 — Inner Dialogue
+
+| 属性 | 说明 |
+|------|------|
+| **角色数量** | 4 种对话角色 |
+| **角色列表** | 🧙 慧心长者（温和、智慧）· 🧘‍♀️ 静观导师（专业、正念）· ☀️ 知心好友（活泼、共情）· 🧒 内在小孩（纯真、好奇） |
+| **对话机制** | 预设对话树 + 自由文字输入 |
+| **对话深度** | 每个角色 15–20 个对话节点，多层分支 |
+| **访问权限** | 🟢 **免登录** |
+
+**核心价值**：与不同的内在角色对话，探索内心被忽视的声音。每个角色代表不同的心理面向。
+
+---
+
+#### 🏃 行动建议 — Action Suggestions
+
+| 属性 | 说明 |
+|------|------|
+| **活动数量** | 多种身体觉察活动 |
+| **展开详情** | 点击查看"为什么"和"怎么做" |
+| **时间标注** | 每项标注所需时间 |
+| **访问权限** | 🟢 **免登录** |
+
+**核心价值**：当头脑太吵时，身体是最好的锚。提供具体可操作的身体行动建议。
+
+---
+
+#### 📝 分享句式 — T-Language Sharing
+
+| 属性 | 说明 |
+|------|------|
+| **T 语言模板** | "当…时候 → 我的解读 → 我感到… → 我希望…" |
+| **交互式生成** | 用户填入各部分，一键生成完整表达 |
+| **复制分享** | 支持一键复制到剪贴板 |
+| **示例展示** | 多个实际应用示例 |
+| **表达技巧** | T 语言沟通技巧卡片 |
+| **访问权限** | 🟢 **免登录** |
+
+**核心价值**：T 语言是一种客观表达感受的沟通方式。帮助用户学会说"我感到…"而不是"你让我…"。
+
+---
+
+### 显示策略 & 登录机制
+
+```
+┌─────────────────────────────────────────────────────┐
+│                  首页 (免登录)                         │
+│  ┌──────────────────────────────────────────────┐    │
+│  │  呼吸动画 · 多语问候 · 每日觉察语 · 8 张功能卡片  │    │
+│  │  版本标识 v2.1.0                              │    │
+│  └──────────────────────────────────────────────┘    │
+├─────────────────────┬───────────────────────────────┤
+│  🟢 免登录模块 (6个)  │  🔐 需登录模块 (2个)           │
+│                     │                               │
+│  😊 情绪罗盘 (概览)   │  🔍 深度发问                   │
+│  🧘 冥想空间         │  ⏰ 24h 回忆                   │
+│  🧠 感受模式         │                               │
+│  💬 觉察对话         │  ↓ 未登录时显示：               │
+│  🏃 行动建议         │  • 模块标题 + 介绍              │
+│  📝 分享句式         │  • 半透明内容预览               │
+│                     │  • 🔐 登录引导按钮              │
+│  ↓ 需登录时：         │                               │
+│  😊 情绪详情弹窗     │  ↓ 登录后：                     │
+│                     │  • 完整功能解锁                  │
+│                     │  • 答案自动保存到本地              │
+└─────────────────────┴───────────────────────────────┘
+```
+
+#### 认证系统
+
+| 属性 | 说明 |
+|------|------|
+| **用户名** | 2 位汉字（如"觉察"）|
+| **密码** | 4 位数字 PIN |
+| **存储** | 本地 localStorage（用户数据）+ sessionStorage（会话） |
+| **注册** | 自动检测新用户并提供注册选项 |
+| **安全** | PIN 哈希存储，非明文 |
+
+---
+
+### 国际化 (i18n)
+
+应用支持 **4 种语言实时切换**，无需刷新页面：
+
+| 语言 | 代码 | 覆盖范围 |
+|------|------|---------|
+| 🇨🇳 中文 | `zh` | 全量翻译（默认语言） |
+| 🇺🇸 English | `en` | 全量翻译 |
+| 🇯🇵 日本語 | `ja` | 全量翻译 |
+| 🇹🇭 ไทย | `th` | 全量翻译 |
+
+**i18n 架构**：
+- **核心翻译**：`js/i18n.js` — UI 通用文案（导航、按钮、提示等）
+- **模块翻译**：`js/lang/*.js` — 每个功能模块独立语言包
+- **首页问候**：4 语轮播，从当前语言开始循环
+
+---
 
 ### 技术栈
 
@@ -52,9 +200,13 @@
 |------|------|
 | **前端** | 原生 HTML5 + CSS3 + Vanilla JavaScript（零框架依赖） |
 | **国际化** | 自研 i18n 引擎 + 模块级语言包架构 |
+| **认证** | 本地 Auth 系统（localStorage + sessionStorage） |
 | **字体** | Google Fonts — Noto Sans SC / Noto Serif SC / Noto Sans JP / Noto Sans Thai |
-| **设计风格** | 深色模式 · 玻璃拟态 · 微动画 · 移动端优先 |
-| **部署** | Netlify（GitHub 自动部署） |
+| **设计** | 深色模式 · 玻璃拟态 · 微动画 · 移动端优先 |
+| **部署** | GitHub → Netlify 自动部署 |
+| **小程序** | 微信小程序原生框架（独立目录 `miniprogram/`） |
+
+---
 
 ### 快速开始
 
@@ -76,26 +228,28 @@ start index.html
 npx http-server . -p 8080 -o
 ```
 
+---
+
 ### 项目结构
 
 ```
 TGroup/
 ├── index.html              # 主入口（SPA 单页应用）
 ├── css/
-│   └── style.css           # 全局样式（深色主题、玻璃拟态、动画）
+│   └── style.css           # 全局样式（2600+ 行，深色主题/玻璃拟态/动画）
 ├── js/
-│   ├── i18n.js             # 🌍 国际化核心引擎（中/英/日/泰）
+│   ├── i18n.js             # 🌍 国际化核心引擎（4 语翻译）
 │   ├── auth.js             # 🔐 认证系统（注册/登录/会话管理）
-│   ├── app.js              # 应用核心逻辑（路由、导航、启动画面）
-│   ├── emotions.js         # 😊 情绪罗盘（120+ 情绪数据与交互）
-│   ├── questioning.js      # 🔍 深度发问模块
-│   ├── recall.js           # ⏰ 24 小时回忆引导
-│   ├── meditation.js       # 🧘 冥想空间与计时器
-│   ├── brain.js            # 🧠 左右脑切换练习
-│   ├── dialogue.js         # 💬 觉察对话（多角色 AI）
-│   ├── actions.js          # 🏃 行动建议
-│   ├── sharing.js          # 📝 T 语言分享句式
-│   └── lang/               # 📦 模块级国际化语言包
+│   ├── app.js              # 🏠 应用核心逻辑（路由/导航/启动画面/版本）
+│   ├── emotions.js         # 😊 情绪罗盘（91 条情绪数据 + 筛选 + 详情弹窗）
+│   ├── questioning.js      # 🔍 深度发问（5 维度 + 登录预览模式）
+│   ├── recall.js           # ⏰ 24h 回忆（时间线 + 登录预览模式）
+│   ├── meditation.js       # 🧘 冥想空间（计时器 + 呼吸引导 + 文字引导）
+│   ├── brain.js            # 🧠 感受模式（左右脑对比 + 觉察练习）
+│   ├── dialogue.js         # 💬 觉察对话（4 角色 × 对话树 + 自由输入）
+│   ├── actions.js          # 🏃 行动建议（展开式详情卡片）
+│   ├── sharing.js          # 📝 T 语言（交互式模板 + 复制 + 示例 + 技巧）
+│   └── lang/               # 📦 模块级国际化语言包（8 个文件）
 │       ├── emotions-lang.js
 │       ├── dialogue-lang.js
 │       ├── questioning-lang.js
@@ -104,13 +258,13 @@ TGroup/
 │       ├── brain-lang.js
 │       ├── actions-lang.js
 │       └── sharing-lang.js
-├── 基本资料/                # 参考资料（觉察表图片）
+├── miniprogram/            # 📱 微信小程序版本
+│   ├── app.js / app.json / app.wxss
+│   ├── pages/              # 各页面（home/emotions/appendix 等）
+│   └── utils/              # 工具模块（i18n.js 等）
+├── 基本资料/                # 参考资料
 └── README.md
 ```
-
-### 开源协议
-
-本项目基于 [MIT License](LICENSE) 开源，欢迎自由使用与二次开发。
 
 ---
 
@@ -118,108 +272,63 @@ TGroup/
 
 ### About
 
-**Self-Awareness Practice (BeingYourself)** is a web + mini-program application designed for mindfulness practitioners and personal development enthusiasts. It combines multiple psychological awareness tools — including **emotion vocabulary exploration, deep self-inquiry, guided meditation, brain-hemisphere switching, and inner dialogue** — to help users shift from "thinking mind" back to "feeling body" and authentically connect with their present inner state.
+**Self-Awareness Practice (BeingYourself)** is a web + WeChat Mini Program application for mindfulness practitioners and personal growth enthusiasts. It integrates multiple psychological awareness tools — **emotion vocabulary, deep self-inquiry, guided meditation, brain-hemisphere switching, and inner dialogue** — to help you shift from "analytical mind" to "feeling body" and connect with your present inner state.
 
 > 🧘 *Look within, and see your authentic self*
 
-### Features
+### Module Overview
 
-| Module | Icon | Description |
-|--------|------|-------------|
-| **Emotion Compass** | 😊 | Explore 120+ emotions, understand their triggers and how to be with them |
-| **Deep Inquiry** | 🔍 | Multi-dimensional self-reflection questions for conscious awareness |
-| **24h Recall** | ⏰ | Structured review of your genuine feelings over the past 24 hours |
-| **Meditation Space** | 🧘 | Breathing guide + meditation timer, the starting point of awareness practice |
-| **Feeling Mode** | 🧠 | Shift from left-brain analysis to right-brain experiential awareness |
-| **Inner Dialogue** | 💬 | Deep inner dialogue with built-in multi-persona AI characters (login required) |
-| **Action Suggestions** | 🏃 | Recommended physical activities to quiet the analytical mind |
-| **T-Language Sharing** | 📝 | Communication templates based on T-language for expressing feelings objectively |
+| Module | Access | Description |
+|--------|--------|-------------|
+| 😊 **Emotion Compass** | 🟢 Open (detail needs login) | 91 emotions with scenarios, intensity levels, and coping suggestions |
+| 🔍 **Deep Inquiry** | 🔐 Login required | 5 dimensions (body/emotion/thought/relation/meaning) of self-reflection |
+| ⏰ **24h Recall** | 🔐 Login required | Structured timeline review of your past 24 hours |
+| 🧘 **Meditation Space** | 🟢 Open | 3–15 min timer with breathing guide and mindfulness prompts |
+| 🧠 **Feeling Mode** | 🟢 Open | Left-brain (analysis) → Right-brain (feeling) switching exercises |
+| 💬 **Inner Dialogue** | 🟢 Open | 4 AI personas: Sage, Therapist, Friend, Inner Child |
+| 🏃 **Action Tips** | 🟢 Open | Body-based activities to quiet the analytical mind |
+| 📝 **T-Language** | 🟢 Open | Interactive "When... I feel... I wish..." communication templates |
 
-### What's New in v2.0
+### Display Strategy
 
-- 🌍 **Quad-language i18n** — Real-time switching between 中文, English, 日本語, and ไทย
-- 🔐 **Authentication System** — Local registration/login with username + PIN
-- 🏠 **Daily Awareness Quote** — Mindfulness inspirations on the home page
-- 📱 **Bottom Navigation + More Menu** — Mobile-friendly navigation experience
-- 🎨 **Splash Screen** — Immersive breathing animation on launch
-
-### Tech Stack
-
-| Category | Technology |
-|----------|------------|
-| **Frontend** | Pure HTML5 + CSS3 + Vanilla JavaScript (zero framework dependencies) |
-| **i18n** | Custom i18n engine + modular language pack architecture |
-| **Typography** | Google Fonts — Noto Sans SC / Noto Serif SC / Noto Sans JP / Noto Sans Thai |
-| **Design** | Dark mode · Glassmorphism · Micro-animations · Mobile-first |
-| **Deployment** | Netlify (auto-deploy from GitHub) |
+- **6 modules** are fully accessible without login
+- **2 modules** (Deep Inquiry, 24h Recall) show a preview with module intro + dimmed content + login prompt when not logged in
+- **Emotion details** (individual emotion info modal) requires login
+- Login uses a 2-character Chinese username + 4-digit PIN system
 
 ### Quick Start
 
-**Option 1: Use Online (Recommended)**
-
 Visit 👉 [https://selfawareness.netlify.app/](https://selfawareness.netlify.app/)
 
-**Option 2: Run Locally**
+Or run locally:
 
 ```bash
-# Clone the repository
 git clone https://github.com/zixiang2008/TGroup.git
 cd TGroup
-
-# Open index.html directly in your browser
-# Or use a local development server
 npx http-server . -p 8080 -o
-```
-
-### Project Structure
-
-```
-TGroup/
-├── index.html              # Main entry (SPA)
-├── css/
-│   └── style.css           # Global styles (dark theme, glassmorphism, animations)
-├── js/
-│   ├── i18n.js             # 🌍 i18n core engine (ZH/EN/JA/TH)
-│   ├── auth.js             # 🔐 Auth system (register/login/session)
-│   ├── app.js              # Core app logic (routing, navigation, splash)
-│   ├── emotions.js         # 😊 Emotion Compass (120+ emotions data & UI)
-│   ├── questioning.js      # 🔍 Deep Inquiry module
-│   ├── recall.js           # ⏰ 24h Recall guide
-│   ├── meditation.js       # 🧘 Meditation Space & timer
-│   ├── brain.js            # 🧠 Brain hemisphere switching
-│   ├── dialogue.js         # 💬 Inner Dialogue (multi-persona AI)
-│   ├── actions.js          # 🏃 Action Suggestions
-│   ├── sharing.js          # 📝 T-Language sharing templates
-│   └── lang/               # 📦 Modular i18n language packs
-│       ├── emotions-lang.js
-│       ├── dialogue-lang.js
-│       ├── questioning-lang.js
-│       ├── recall-lang.js
-│       ├── meditation-lang.js
-│       ├── brain-lang.js
-│       ├── actions-lang.js
-│       └── sharing-lang.js
-├── 基本资料/                # Reference materials
-└── README.md
 ```
 
 ### Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions welcome! Fork → Branch → Commit → PR.
 
 ### License
 
-This project is open source under the [MIT License](LICENSE). Free to use and extend.
+Open source under the [MIT License](LICENSE).
 
 ---
 
 ## 更新日志 / Changelog
+
+### v2.1.0 — 2026-03-13
+- 🐛 **修复** Web 版所有二级页面空白问题（`const` 模块不挂载 `window`）
+- ✨ 深度发问 / 24h 回忆 未登录时显示预览 + 登录引导（不再空白）
+- ✨ 首页底部添加版本标识 v2.1.0
+- ✨ 添加 SVG favicon
+- ✨ 情绪罗盘扩充至 91 条，全部免登录浏览
+- ✨ 注册增设 3 级经验评估
+- ✨ 对话深度按经验等级自动切换
+- ✨ 新增身体感受词汇附录（小程序版）
 
 ### v2.0.0 — 2026-03-11
 - ✨ 新增四语国际化系统（中 / 英 / 日 / 泰）
@@ -230,24 +339,8 @@ This project is open source under the [MIT License](LICENSE). Free to use and ex
 - ✨ 新增 8 个模块级语言包
 - 🎨 升级至移动端优先的深色玻璃拟态设计
 
-### v2.1.0 — 2026-03-12
-- ✨ 品牌更名为 BeingYourself
-- ✨ 情绪罗盘扩充至 91 条（新增 24 条），全部免登录
-- ✨ 注册增设 3 级经验评估（experienced / beginner / none）
-- ✨ 对话深度按经验等级自动切换（温和/深度）
-- ✨ 新增身体感受词汇附录（108 个感受词汇 + 搜索）
-- ✨ 首页添加品牌标识与版本号显示
-
 ### v1.0.0 — 2026-03-10
-- 🎉 初始版本发布
-- 😊 情绪罗盘（120+ 情绪数据）
-- 🔍 深度发问模块
-- ⏰ 24 小时回忆引导
-- 🧘 冥想空间与计时器
-- 🧠 左右脑切换练习
-- 💬 觉察对话（多角色）
-- 🏃 行动建议
-- 📝 T 语言分享句式
+- 🎉 初始版本：8 大功能模块完整上线
 
 ---
 

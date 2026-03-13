@@ -2630,3 +2630,37 @@ textarea {
     color: var(--text-secondary);
     line-height: 1.5;
 }
+
+/* ---- Login Prompt Card ---- */
+.login-prompt-card {
+    text-align: center;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glow);
+    border-radius: var(--radius-lg);
+    padding: 32px 20px;
+    margin: 24px 0;
+}
+
+.login-prompt-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.login-prompt-btn {
+    background: var(--gradient-main);
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 22px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+.login-prompt-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(139, 92, 246, 0.5);
+}

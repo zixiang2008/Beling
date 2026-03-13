@@ -7,7 +7,42 @@ const QuestioningModule = (() => {
     const dimKeys = ['body', 'emotion', 'thought', 'relation', 'meaning'];
 
     function init() {
-        Auth.requireLogin(() => render());
+        if (Auth.isLoggedIn()) {
+            render();
+        } else {
+            renderPreview();
+        }
+    }
+
+    function renderPreview() {
+        const container = document.getElementById('questioning-container');
+        if (!container) return;
+        const data = getData();
+        if (!data) return;
+        const lang = I18n.getLang();
+        const loginHint = { zh: '🔐 登录后解锁完整的深度发问体验', en: '🔐 Log in to unlock the full Deep Inquiry experience', ja: '🔐 ログインして深い問いの全体験を解除', th: '🔐 เข้าสู่ระบบเพื่อปลดล็อกประสบการณ์เต็ม' };
+        const loginBtn = { zh: '立即登录', en: 'Log In', ja: 'ログイン', th: 'เข้าสู่ระบบ' };
+
+        container.innerHTML = `
+            <div class="questioning-intro">
+                <h3>${data.title}</h3>
+                <p>${data.intro}</p>
+                <div class="dimension-tabs" style="opacity:0.5;pointer-events:none;">
+                    ${data.dimensions.map((d, i) => `
+                        <button class="dim-tab ${i === 0 ? 'active' : ''}" style="--dim-color:${d.color}">
+                            ${d.name}
+                        </button>
+                    `).join('')}
+                </div>
+            </div>
+            <div class="login-prompt-card">
+                <p>${loginHint[lang] || loginHint.zh}</p>
+                <button class="login-prompt-btn" id="questioning-login-btn">${loginBtn[lang] || loginBtn.zh}</button>
+            </div>
+        `;
+        document.getElementById('questioning-login-btn')?.addEventListener('click', () => {
+            Auth.requireLogin(() => render());
+        });
     }
 
     function render() {
