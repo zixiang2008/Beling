@@ -3101,3 +3101,327 @@ textarea {
     border-color: rgba(139, 92, 246, 0.4);
     background: rgba(139, 92, 246, 0.12);
 }
+
+/* ============================================
+   v2.2.0 - 气球动画
+   ============================================ */
+.balloon-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2rem 1rem;
+}
+
+.balloon-practice-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary, #e8e0f0);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.balloon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.balloon-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(167, 139, 250, 0.5),
+            rgba(139, 92, 246, 0.3),
+            rgba(88, 28, 135, 0.2));
+    border: 2px solid rgba(167, 139, 250, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: breathBalloon 4s ease-in-out infinite;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.2),
+        inset 0 0 30px rgba(139, 92, 246, 0.1);
+}
+
+@keyframes breathBalloon {
+
+    0%,
+    100% {
+        transform: scale(0.85);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+.balloon-timer {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Noto Sans SC', monospace;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.balloon-hint {
+    color: var(--text-secondary, #a0a0b8);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    max-width: 300px;
+}
+
+.balloon-stop-btn {
+    margin-top: 1rem;
+}
+
+.balloon-complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.balloon-complete .complete-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.balloon-complete h3 {
+    color: var(--text-primary, #e8e0f0);
+    margin-bottom: 0.5rem;
+}
+
+.balloon-complete-sub {
+    color: var(--text-secondary, #a0a0b8);
+    margin-bottom: 2rem;
+}
+
+.practice-start-btn,
+.action-start-btn {
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(167, 139, 250, 0.15));
+    color: #a78bfa;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.practice-start-btn:hover,
+.action-start-btn:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(167, 139, 250, 0.3));
+    transform: scale(1.05);
+}
+
+.practice-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.action-start-btn {
+    margin-top: 0.8rem;
+    display: inline-block;
+}
+
+/* ============================================
+   v2.2.0 - 冥想准备倒计时
+   ============================================ */
+.meditation-prepare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 2rem;
+}
+
+.prepare-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid rgba(139, 92, 246, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: prepareGlow 2s ease-in-out infinite;
+    margin-bottom: 2rem;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1), transparent);
+}
+
+@keyframes prepareGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+        border-color: rgba(139, 92, 246, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+        border-color: rgba(139, 92, 246, 0.7);
+    }
+}
+
+.prepare-countdown {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #a78bfa;
+}
+
+.prepare-text {
+    font-size: 1.2rem;
+    color: var(--text-primary, #e8e0f0);
+    margin-bottom: 0.5rem;
+}
+
+.prepare-sub {
+    color: var(--text-secondary, #a0a0b8);
+    font-size: 0.9rem;
+}
+
+.med-focus-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: #a78bfa;
+}
+
+.med-hint-icon {
+    font-size: 1rem;
+}
+
+/* ============================================
+   v2.2.0 - 分享增强
+   ============================================ */
+.sharing-scenes {
+    margin-top: 1.5rem;
+}
+
+.sharing-scenes h4 {
+    color: var(--text-primary, #e8e0f0);
+    margin-bottom: 1rem;
+}
+
+.scenes-grid {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.scene-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+.scene-card:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.06);
+}
+
+.scene-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.scene-name {
+    font-weight: 600;
+    color: var(--text-primary, #e8e0f0);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.scene-example {
+    color: var(--text-secondary, #a0a0b8);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.scene-copy-btn,
+.example-copy-btn {
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 16px;
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.scene-copy-btn:hover,
+.example-copy-btn:hover {
+    background: rgba(139, 92, 246, 0.25);
+}
+
+.scene-copy-btn.copied,
+.example-copy-btn.copied,
+.sharing-copy-btn.copied {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.4);
+    color: #22c55e;
+}
+
+.example-card {
+    position: relative;
+}
+
+.example-copy-btn {
+    margin-top: 0.5rem;
+}
+
+.sharing-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.share-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    padding: 0.5rem 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 10px;
+    color: #22c55e;
+    font-size: 0.85rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.share-hint-icon {
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

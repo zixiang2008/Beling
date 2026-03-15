@@ -2,6 +2,8 @@
 window.BrainLang = {
     zh: {
         title: '感受模式', intro: '从"想"的模式切换到"感受"的模式。左脑负责分析思考，右脑负责感受体验。',
+        startBtn: '开始练习', stopBtn: '结束', returnBtn: '返回',
+        completeMsg: '练习完成！', completeSub: '很好，你刚刚给了自己一段觉察时光',
         leftBrain: '左脑（思考）', rightBrain: '右脑（感受）',
         leftDesc: '分析、逻辑、语言、判断', rightDesc: '直觉、感受、创造、体验',
         practiceTitle: '切换练习',
@@ -18,6 +20,8 @@ window.BrainLang = {
     },
     en: {
         title: 'Feeling Mode', intro: 'Switch from "thinking" mode to "feeling" mode. The left brain analyzes; the right brain feels.',
+        startBtn: 'Start', stopBtn: 'Stop', returnBtn: 'Return',
+        completeMsg: 'Practice Complete!', completeSub: 'Great, you just gave yourself a moment of awareness',
         leftBrain: 'Left Brain (Thinking)', rightBrain: 'Right Brain (Feeling)',
         leftDesc: 'Analysis, Logic, Language, Judgment', rightDesc: 'Intuition, Feeling, Creativity, Experience',
         practiceTitle: 'Switching Exercises',
@@ -34,6 +38,8 @@ window.BrainLang = {
     },
     ja: {
         title: '感覚モード', intro: '「考える」モードから「感じる」モードへ切り替え。左脳は分析、右脳は感受。',
+        startBtn: '始める', stopBtn: '終了', returnBtn: '戻る',
+        completeMsg: '練習完了！', completeSub: '大切な気づきの時間を自分に贈りました',
         leftBrain: '左脳（思考）', rightBrain: '右脳（感受）',
         leftDesc: '分析、論理、言語、判断', rightDesc: '直感、感覚、創造、体験',
         practiceTitle: '切り替え練習',
@@ -50,6 +56,8 @@ window.BrainLang = {
     },
     th: {
         title: 'โหมดความรู้สึก', intro: 'เปลี่ยนจากโหมด "คิด" เป็นโหมด "รู้สึก" สมองซ้ายวิเคราะห์ สมองขวารู้สึก',
+        startBtn: 'เริ่ม', stopBtn: 'หยุด', returnBtn: 'กลับ',
+        completeMsg: 'การฝึกเสร็จสิ้น!', completeSub: 'คุณเพิ่งมอบช่วงเวลาแห่งการตระหนักรู้ให้ตัวเอง',
         leftBrain: 'สมองซ้าย (คิด)', rightBrain: 'สมองขวา (รู้สึก)',
         leftDesc: 'วิเคราะห์ ตรรกะ ภาษา ตัดสิน', rightDesc: 'สัญชาตญาณ ความรู้สึก ความคิดสร้างสรรค์ ประสบการณ์',
         practiceTitle: 'แบบฝึกหัดเปลี่ยนโหมด',

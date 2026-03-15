@@ -1,5 +1,6 @@
 /* ============================================
    分享句式模块 - sharing.js (i18n)
+   v2.2.0: 增强分享功能，复制到聊天软件提示
    ============================================ */
 const SharingModule = (() => {
     function getData() { return window.SharingLang?.[I18n.getLang()] || window.SharingLang?.zh; }
@@ -43,13 +44,38 @@ const SharingModule = (() => {
                 <div class="sharing-result" id="sharing-result" style="display:none;">
                     <h4>${data.template.result}</h4>
                     <p id="sharing-output"></p>
-                    <button class="sharing-copy-btn" id="sharing-copy">${data.template.copyBtn}</button>
+                    <div class="sharing-actions">
+                        <button class="sharing-copy-btn" id="sharing-copy">${data.template.copyBtn}</button>
+                    </div>
+                    <div class="share-hint" id="share-hint" style="display:none;">
+                        <span class="share-hint-icon">✅</span>
+                        <span>${data.shareHint || '已复制！可粘贴到微信、WhatsApp等聊天软件发送'}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sharing-scenes">
+                <h4>${data.scenesTitle || '💡 使用场景'}</h4>
+                <div class="scenes-grid">
+                    ${(data.scenes || []).map(s => `
+                        <div class="scene-card">
+                            <div class="scene-icon">${s.icon}</div>
+                            <div class="scene-name">${s.name}</div>
+                            <div class="scene-example">${s.example}</div>
+                            <button class="scene-copy-btn" data-text="${s.example.replace(/"/g, '&quot;')}">${data.template.copyBtn}</button>
+                        </div>
+                    `).join('')}
                 </div>
             </div>
 
             <div class="sharing-examples">
                 <h4>${data.examplesTitle}</h4>
-                ${data.examples.map(ex => `<div class="example-card"><p>${ex}</p></div>`).join('')}
+                ${data.examples.map(ex => `
+                    <div class="example-card">
+                        <p>${ex}</p>
+                        <button class="example-copy-btn" data-text="${ex.replace(/"/g, '&quot;')}">${data.template.copyBtn}</button>
+                    </div>
+                `).join('')}
             </div>
 
             <div class="sharing-tips">
@@ -62,6 +88,7 @@ const SharingModule = (() => {
             </div>
         `;
 
+        // Generate
         document.getElementById('sharing-generate')?.addEventListener('click', () => {
             const when = document.getElementById('tpl-when').value.trim();
             const interpret = document.getElementById('tpl-interpret').value.trim();
@@ -74,13 +101,42 @@ const SharingModule = (() => {
             document.getElementById('sharing-result').style.display = '';
         });
 
+        // Copy generated result
         document.getElementById('sharing-copy')?.addEventListener('click', () => {
             const text = document.getElementById('sharing-output').textContent;
-            navigator.clipboard?.writeText(text).then(() => {
-                const btn = document.getElementById('sharing-copy');
-                btn.textContent = t('common.copied');
-                setTimeout(() => { btn.textContent = data.template.copyBtn; }, 2000);
+            copyAndShowHint(text, 'sharing-copy', data);
+        });
+
+        // Copy scene examples
+        container.querySelectorAll('.scene-copy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                copyAndShowHint(btn.dataset.text, null, data, btn);
             });
+        });
+
+        // Copy example sentences
+        container.querySelectorAll('.example-copy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                copyAndShowHint(btn.dataset.text, null, data, btn);
+            });
+        });
+    }
+
+    function copyAndShowHint(text, mainBtnId, data, btn) {
+        navigator.clipboard?.writeText(text).then(() => {
+            // Show hint
+            const hint = document.getElementById('share-hint');
+            if (hint) { hint.style.display = ''; setTimeout(() => { hint.style.display = 'none'; }, 3000); }
+            // Button feedback
+            const target = btn || document.getElementById(mainBtnId);
+            if (target) {
+                const orig = target.textContent;
+                target.textContent = '✅ ' + (data.copiedMsg || '已复制');
+                target.classList.add('copied');
+                setTimeout(() => { target.textContent = orig; target.classList.remove('copied'); }, 2000);
+            }
         });
     }
 

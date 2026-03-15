@@ -11,9 +11,9 @@ const I18n = (() => {
     // ---- UI 通用翻译 ----
     const ui = {
         zh: {
-            appName: '觉察',
-            splashTitle: '觉 察',
-            splashSub: '向内看，看见真实的自己',
+            appName: '觉察●内在探索',
+            splashTitle: '觉察●内在探索',
+            splashSub: 'Being Yourself@知己心里',
             greeting: { morning: '早上好', noon: '中午好', afternoon: '下午好', evening: '晚上好' },
             greetingSuffix: '，今天你感觉如何？',
             dailyLabel: '✨ 今日觉察语',
@@ -22,7 +22,7 @@ const I18n = (() => {
                 home: '觉察', emotions: '情绪罗盘', questioning: '深度发问',
                 recall: '24h 回忆', meditation: '冥想空间', brain: '感受模式',
                 dialogue: '觉察对话', actions: '行动建议', sharing: '分享句式',
-                knowledge: '专业知识库', counselor: '咨询支持'
+                knowledge: '觉察理论', counselor: '导师链接'
             },
             cards: {
                 emotions: { title: '情绪罗盘', desc: '探索120+种情绪' },
@@ -33,8 +33,8 @@ const I18n = (() => {
                 dialogue: { title: '觉察对话', desc: '与内在角色对话' },
                 actions: { title: '行动建议', desc: '用身体放下头脑' },
                 sharing: { title: '分享句式', desc: 'T语言沟通模板' },
-                knowledge: { title: '专业知识库', desc: '身心灵整合疗愈知识' },
-                counselor: { title: '咨询支持', desc: '专业咨询师线上支持' }
+                knowledge: { title: '觉察理论', desc: '身心灵整合疗愈知识' },
+                counselor: { title: '导师链接', desc: '专业导师线上支持' }
             },
             filters: { all: '全部', negative: '不舒服的感受', neutral: '中性', positive: '舒服的感受' },
             emotionDetail: { scene: '🎯 常见场景', suggestions: '💡 建议方法', tags: '🏷️ 相关标签', intensity: '强度' },
@@ -71,7 +71,7 @@ const I18n = (() => {
                 home: 'Awareness', emotions: 'Emotion Compass', questioning: 'Deep Inquiry',
                 recall: '24h Recall', meditation: 'Meditation', brain: 'Feeling Mode',
                 dialogue: 'Inner Dialogue', actions: 'Action Tips', sharing: 'T-Language',
-                knowledge: 'Knowledge Base', counselor: 'Counselor Support'
+                knowledge: 'Awareness Theory', counselor: 'Mentor Connect'
             },
             cards: {
                 emotions: { title: 'Emotion Compass', desc: 'Explore 120+ emotions' },
@@ -82,8 +82,8 @@ const I18n = (() => {
                 dialogue: { title: 'Inner Dialogue', desc: 'Talk with inner characters' },
                 actions: { title: 'Action Tips', desc: 'Quiet the mind through body' },
                 sharing: { title: 'T-Language', desc: 'Communication templates' },
-                knowledge: { title: 'Knowledge Base', desc: 'Mind-Body-Spirit healing' },
-                counselor: { title: 'Counselor Support', desc: 'Professional online support' }
+                knowledge: { title: 'Awareness Theory', desc: 'Mind-Body-Spirit healing' },
+                counselor: { title: 'Mentor Connect', desc: 'Professional mentor support' }
             },
             filters: { all: 'All', negative: 'Uncomfortable', neutral: 'Neutral', positive: 'Comfortable' },
             emotionDetail: { scene: '🎯 Common Scenes', suggestions: '💡 Suggestions', tags: '🏷️ Tags', intensity: 'Intensity' },
@@ -120,7 +120,7 @@ const I18n = (() => {
                 home: '気づき', emotions: '感情コンパス', questioning: '深い問い',
                 recall: '24時間振り返り', meditation: '瞑想空間', brain: '感覚モード',
                 dialogue: '内なる対話', actions: 'アクション', sharing: 'T言語',
-                knowledge: '知識ベース', counselor: 'サポート'
+                knowledge: '気づき理論', counselor: 'メンター'
             },
             cards: {
                 emotions: { title: '感情コンパス', desc: '120+の感情を探索' },
@@ -131,8 +131,8 @@ const I18n = (() => {
                 dialogue: { title: '内なる対話', desc: '内なるキャラクターと対話' },
                 actions: { title: 'アクション', desc: '体で心を解放する' },
                 sharing: { title: 'T言語', desc: 'コミュニケーションテンプレート' },
-                knowledge: { title: '知識ベース', desc: '心身霊統合ヒーリング' },
-                counselor: { title: 'サポート', desc: '専門カウンセラー支援' }
+                knowledge: { title: '気づき理論', desc: '心身霊統合ヒーリング' },
+                counselor: { title: 'メンター', desc: '専門メンターサポート' }
             },
             filters: { all: '全て', negative: '不快な感情', neutral: '中性', positive: '快い感情' },
             emotionDetail: { scene: '🎯 よくある場面', suggestions: '💡 おすすめの方法', tags: '🏷️ タグ', intensity: '強度' },
@@ -169,7 +169,7 @@ const I18n = (() => {
                 home: 'การตระหนักรู้', emotions: 'เข็มทิศอารมณ์', questioning: 'คำถามลึก',
                 recall: 'ทบทวน 24 ชม.', meditation: 'พื้นที่สมาธิ', brain: 'โหมดความรู้สึก',
                 dialogue: 'บทสนทนาภายใน', actions: 'คำแนะนำ', sharing: 'ภาษา T',
-                knowledge: 'คลังความรู้', counselor: 'การสนับสนุน'
+                knowledge: 'ทฤษฎีการตระหนักรู้', counselor: 'เชื่อมต่อที่ปรึกษา'
             },
             cards: {
                 emotions: { title: 'เข็มทิศอารมณ์', desc: 'สำรวจ 120+ อารมณ์' },
@@ -180,8 +180,8 @@ const I18n = (() => {
                 dialogue: { title: 'บทสนทนาภายใน', desc: 'สนทนากับตัวตนภายใน' },
                 actions: { title: 'คำแนะนำ', desc: 'ปล่อยใจด้วยร่างกาย' },
                 sharing: { title: 'ภาษา T', desc: 'แม่แบบการสื่อสาร' },
-                knowledge: { title: 'คลังความรู้', desc: 'ความรู้เยียวยาบูรณาการ' },
-                counselor: { title: 'การสนับสนุน', desc: 'ที่ปรึกษามืออาชีพ' }
+                knowledge: { title: 'ทฤษฎีการตระหนักรู้', desc: 'ความรู้เยียวยาบูรณาการ' },
+                counselor: { title: 'เชื่อมต่อที่ปรึกษา', desc: 'การสนับสนุนจากที่ปรึกษา' }
             },
             filters: { all: 'ทั้งหมด', negative: 'ไม่สบายใจ', neutral: 'เป็นกลาง', positive: 'สบายใจ' },
             emotionDetail: { scene: '🎯 สถานการณ์ที่พบบ่อย', suggestions: '💡 คำแนะนำ', tags: '🏷️ แท็ก', intensity: 'ความเข้มข้น' },

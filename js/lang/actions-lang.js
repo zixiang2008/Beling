@@ -1,7 +1,9 @@
 /* 行动建议翻译 */
 window.ActionsLang = {
     zh: {
-        title: '行动建议', intro: '当头脑太吵时，用身体来回到当下。选择一个适合你现在状态的活动。',
+        title: '行动建议', intro: '当头脑太吼时，用身体来回到当下。选择一个适合你现在状态的活动。',
+        startBtn: '开始练习', stopBtn: '结束', returnBtn: '返回',
+        completeMsg: '活动完成！', completeSub: '很好，你用行动回到了当下',
         actions: [
             { icon: '🏃', title: '跑步/快走', why: '有氧运动能快速释放压力荷尔蒙，让大脑产生内啡肽', how: '出门跑步15-30分钟，或绕小区快走', time: '15-30分钟' },
             { icon: '🧘', title: '瑜伽', why: '连接身体和呼吸，温和地释放身体存储的紧张', how: '做5个基础瑜伽动作，配合深呼吸', time: '15-20分钟' },
@@ -17,6 +19,8 @@ window.ActionsLang = {
     },
     en: {
         title: 'Action Tips', intro: 'When the mind is too loud, use your body to return to the present. Choose an activity that suits your current state.',
+        startBtn: 'Start', stopBtn: 'Stop', returnBtn: 'Return',
+        completeMsg: 'Activity Complete!', completeSub: 'Great, you returned to the present through action',
         actions: [
             { icon: '🏃', title: 'Run / Walk', why: 'Aerobic exercise quickly releases stress hormones and produces endorphins', how: 'Go for a 15-30 minute run or brisk walk', time: '15-30 min' },
             { icon: '🧘', title: 'Yoga', why: 'Connects body and breath, gently releasing stored tension', how: 'Do 5 basic yoga poses with deep breathing', time: '15-20 min' },
@@ -32,6 +36,8 @@ window.ActionsLang = {
     },
     ja: {
         title: 'アクションのヒント', intro: '頭がうるさい時は、体で今に戻りましょう。今の状態に合う活動を選んでください。',
+        startBtn: '始める', stopBtn: '終了', returnBtn: '戻る',
+        completeMsg: '活動完了！', completeSub: '行動で今に戻りました',
         actions: [
             { icon: '🏃', title: 'ランニング/早歩き', why: '有酸素運動はストレスホルモンを素早く解放し、エンドルフィンを生む', how: '15-30分走るか早歩きする', time: '15-30分' },
             { icon: '🧘', title: 'ヨガ', why: '体と呼吸をつなぎ、蓄積された緊張をやさしく解放する', how: '基本のヨガポーズ5つを深呼吸とともに', time: '15-20分' },
@@ -47,6 +53,8 @@ window.ActionsLang = {
     },
     th: {
         title: 'คำแนะนำการกระทำ', intro: 'เมื่อจิตใจดังเกินไป ใช้ร่างกายกลับมาสู่ปัจจุบัน เลือกกิจกรรมที่เหมาะกับสถานะปัจจุบัน',
+        startBtn: 'เริ่ม', stopBtn: 'หยุด', returnBtn: 'กลับ',
+        completeMsg: 'กิจกรรมเสร็จสิ้น!', completeSub: 'คุณกลับมาสู่ปัจจุบันด้วยการกระทำ',
         actions: [
             { icon: '🏃', title: 'วิ่ง/เดินเร็ว', why: 'การออกกำลังกายแอโรบิคปล่อยฮอร์โมนความเครียดและสร้างเอนดอร์ฟิน', how: 'ออกไปวิ่งหรือเดินเร็ว 15-30 นาที', time: '15-30 นาที' },
             { icon: '🧘', title: 'โยคะ', why: 'เชื่อมต่อร่างกายและลมหายใจ ปล่อยความตึงอย่างอ่อนโยน', how: 'ทำท่าโยคะพื้นฐาน 5 ท่าพร้อมหายใจลึก', time: '15-20 นาที' },

@@ -7,6 +7,9 @@ window.MeditationLang = {
         breatheIn: '吸气', breatheOut: '呼气', hold: '停',
         complete: '🙏 冥想结束', completeMsg: '你刚刚给了自己一段珍贵的安静时光。',
         returnBtn: '返回',
+        focusHint: '🔔 专注冒想即可，时间到会有提醒',
+        prepareMsg: '准备进入冒想...',
+        prepareSub: '调整姿势，闭上眼睛，深呼吸...',
         guides: [
             '闭上眼睛，感受自己坐着的身体……',
             '注意你的呼吸，不需要改变它，只是观察……',
@@ -27,6 +30,9 @@ window.MeditationLang = {
         breatheIn: 'Breathe in', breatheOut: 'Breathe out', hold: 'Hold',
         complete: '🙏 Meditation Complete', completeMsg: 'You just gave yourself a precious moment of stillness.',
         returnBtn: 'Return',
+        focusHint: '🔔 Just focus on meditation, you will be reminded when time is up',
+        prepareMsg: 'Preparing to enter meditation...',
+        prepareSub: 'Adjust your posture, close your eyes, breathe deeply...',
         guides: [
             'Close your eyes and feel your body sitting…',
             'Notice your breath. Don\'t change it, just observe…',
@@ -47,6 +53,9 @@ window.MeditationLang = {
         breatheIn: '吸って', breatheOut: '吐いて', hold: '止めて',
         complete: '🙏 瞑想完了', completeMsg: '大切な静寂の時間を自分に贈りました。',
         returnBtn: '戻る',
+        focusHint: '🔔 瘤想に集中してください。時間が来たらお知らせします',
+        prepareMsg: '瘤想の準備...',
+        prepareSub: '姿勢を整え、目を閉じ、深呼吸...',
         guides: [
             '目を閉じて、座っている体を感じて…',
             '呼吸に気づいて。変えなくていい、ただ観察して…',
@@ -67,6 +76,9 @@ window.MeditationLang = {
         breatheIn: 'หายใจเข้า', breatheOut: 'หายใจออก', hold: 'กลั้น',
         complete: '🙏 สมาธิเสร็จสิ้น', completeMsg: 'คุณเพิ่งมอบช่วงเวลาอันมีค่าของความสงบให้ตัวเอง',
         returnBtn: 'กลับ',
+        focusHint: '🔔 มุ่งเน้นสมาธิ จะแจ้งเตือนเมื่อถึงเวลา',
+        prepareMsg: 'เตรียมเข้าสู่สมาธิ...',
+        prepareSub: 'ปรับท่าทาง หลับตา หายใจลึก...',
         guides: [
             'หลับตา รู้สึกถึงร่างกายที่นั่งอยู่…',
             'สังเกตลมหายใจ ไม่ต้องเปลี่ยน แค่สังเกต…',

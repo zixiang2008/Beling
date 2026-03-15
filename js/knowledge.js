@@ -5,7 +5,7 @@
 const KnowledgeModule = (() => {
     const data = {
         zh: {
-            title: '📚 专业知识库', intro: '来自 BeingYourself 的身心灵整合疗愈知识体系',
+            title: '📚 觉察理论', intro: '来自 BeingYourself 的身心灵整合疗愈知识体系',
             dimensionTitle: '🔮 身心灵三维方法',
             dimensions: [
                 { icon: '🧠', name: 'MIND · 心智', desc: '运用基于临在的探询工具，理解并柔化心智循环、生存策略，消化自我构建。' },
@@ -40,7 +40,7 @@ const KnowledgeModule = (() => {
             linkTitle: '了解更多 → 访问官方网站'
         },
         en: {
-            title: '📚 Knowledge Base', intro: 'Mind-Body-Spirit integration healing knowledge from BeingYourself',
+            title: '📚 Awareness Theory', intro: 'Mind-Body-Spirit integration healing knowledge from BeingYourself',
             dimensionTitle: '🔮 Mind · Body · Spirit',
             dimensions: [
                 { icon: '🧠', name: 'MIND', desc: 'Using presence-based inquiry tools to understand and soften mental loops, survival strategies, and digest ego constructs.' },
@@ -69,7 +69,7 @@ const KnowledgeModule = (() => {
             linkTitle: 'Learn More → Visit Official Website'
         },
         ja: {
-            title: '📚 知識ベース', intro: 'BeingYourselfの心身魂統合ヒーリング知識体系',
+            title: '📚 気づき理論', intro: 'BeingYourselfの心身魂統合ヒーリング知識体系',
             dimensionTitle: '🔮 心・体・魂',
             dimensions: [
                 { icon: '🧠', name: 'MIND · 心', desc: 'プレゼンスベースの探求ツールで、メンタルループを理解し柔らげる。' },
@@ -98,7 +98,7 @@ const KnowledgeModule = (() => {
             linkTitle: '詳しくは → 公式サイトへ'
         },
         th: {
-            title: '📚 คลังความรู้', intro: 'ความรู้การเยียวยาแบบบูรณาการจาก BeingYourself',
+            title: '📚 ทฤษฎีการตระหนักรู้', intro: 'ความรู้การเยียวยาแบบบูรณาการจาก BeingYourself',
             dimensionTitle: '🔮 กาย · ใจ · จิตวิญญาณ',
             dimensions: [
                 { icon: '🧠', name: 'MIND', desc: 'ใช้เครื่องมือสำรวจแบบมีสติเพื่อเข้าใจวงจรจิตใจ' },

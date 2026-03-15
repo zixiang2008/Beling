@@ -8,8 +8,8 @@ const CounselorModule = (() => {
 
     const data = {
         zh: {
-            title: '🤝 专业咨询支持', intro: '每25位伙伴组成一期，由专业咨询师 Yue 提供线上会议支持',
-            counselorRole: 'BeingYourself 创始人 · 身心灵整合咨询师',
+            title: '🔗 导师链接', intro: '每25位伙伴组成一期，由专业导师 Yue 提供线上会议支持',
+            counselorRole: 'BeingYourself 创始人 · 身心灵整合导师',
             counselorBio: '我经历过极端的童年逆境（ACE评分10/10），走过情绪痛苦、混乱、压抑和羞耻。我的身体、灵魂、精神——都在试图说出我不敢说的话。疗愈始于我停止奔跑和修复的那一刻。',
             tags: ['Compassionate Inquiry', 'IFS', 'NARM', 'Shadow Constellation', 'Diamond Approach'],
             meetingTitle: '📊 线上会议报名进度',
@@ -29,8 +29,8 @@ const CounselorModule = (() => {
             linkTitle: '预约免费咨询 → 访问官方网站', signedMsg: '报名成功！请加入群聊等待通知', linkCopied: '链接已复制！'
         },
         en: {
-            title: '🤝 Professional Support', intro: 'Every 25 participants form a group for an online session led by counselor Yue',
-            counselorRole: 'BeingYourself Founder · Mind-Body-Spirit Counselor',
+            title: '🔗 Mentor Connect', intro: 'Every 25 participants form a group for an online session led by mentor Yue',
+            counselorRole: 'BeingYourself Founder · Mind-Body-Spirit Mentor',
             counselorBio: 'I\'ve lived through extreme adverse childhood experience (ACE score 10/10). My healing began when I stopped running and fixing.',
             tags: ['Compassionate Inquiry', 'IFS', 'NARM', 'Shadow Constellation', 'Diamond Approach'],
             meetingTitle: '📊 Online Meeting Sign-up Progress',
@@ -50,8 +50,8 @@ const CounselorModule = (() => {
             linkTitle: 'Book Free Consultation → Visit Website', signedMsg: 'Signed up successfully!', linkCopied: 'Link copied!'
         },
         ja: {
-            title: '🤝 専門サポート', intro: '25名が集まるごとに、カウンセラーYueがオンラインミーティングを開催',
-            counselorRole: 'BeingYourself創設者 · 心身霊統合カウンセラー',
+            title: '🔗 メンターリンク', intro: '25名が集まるごとに、メンターYueがオンラインミーティングを開催',
+            counselorRole: 'BeingYourself創設者 · 心身霊統合メンター',
             counselorBio: '極端な逆境的小児期体験を経て（ACE 10/10）、自分自身と向き合う勇気を見つけた時に癒しが始まりました。',
             tags: ['Compassionate Inquiry', 'IFS', 'NARM', 'Shadow Constellation', 'Diamond Approach'],
             meetingTitle: '📊 申込状況', meetingDesc: '25名でグループミーティングを開催。',
@@ -69,7 +69,7 @@ const CounselorModule = (() => {
             linkTitle: '無料相談予約 → ウェブサイトへ', signedMsg: '申込完了！', linkCopied: 'コピーしました！'
         },
         th: {
-            title: '🤝 การสนับสนุน', intro: 'ทุก 25 คนจะจัดประชุมออนไลน์โดย Yue',
+            title: '🔗 เชื่อมต่อที่ปรึกษา', intro: 'ทุก 25 คนจะจัดประชุมออนไลน์โดย Yue',
             counselorRole: 'ผู้ก่อตั้ง BeingYourself',
             counselorBio: 'ฉันผ่านประสบการณ์วัยเด็กที่ยากลำบาก (ACE 10/10)',
             tags: ['Compassionate Inquiry', 'IFS', 'NARM', 'Shadow Constellation', 'Diamond Approach'],

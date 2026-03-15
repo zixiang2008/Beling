@@ -1,10 +1,58 @@
 /* ============================================
    冥想空间模块 - meditation.js (i18n)
+   v2.2.0: 颂钵音效 + 15秒准备倒计时 + 结束提醒
    ============================================ */
 const MeditationModule = (() => {
     function getData() { return window.MeditationLang?.[I18n.getLang()] || window.MeditationLang?.zh; }
     const durations = [3, 5, 10, 15]; // minutes
     let timer = null, elapsed = 0, totalSeconds = 0, isPaused = false, guideIdx = 0, guideTimer = null;
+    let audioCtx = null, bowlInterval = null;
+
+    // ---- Web Audio API: 颂钵音效 ----
+    function getAudioCtx() {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        return audioCtx;
+    }
+
+    function playSingingBowl(duration = 4) {
+        try {
+            const ctx = getAudioCtx();
+            const now = ctx.currentTime;
+            const freqs = [174, 285, 396]; // 低频颂钵谐波
+            freqs.forEach(freq => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, now);
+                gain.gain.setValueAtTime(0, now);
+                gain.gain.linearRampToValueAtTime(0.06, now + 0.3);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(now);
+                osc.stop(now + duration);
+            });
+        } catch (e) { /* audio not supported */ }
+    }
+
+    function playBell() {
+        try {
+            const ctx = getAudioCtx();
+            const now = ctx.currentTime;
+            [528, 639, 741].forEach(freq => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, now);
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 3);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(now);
+                osc.stop(now + 3);
+            });
+        } catch (e) { }
+    }
 
     function init() { render(); }
 
@@ -19,6 +67,10 @@ const MeditationModule = (() => {
             <div class="meditation-intro">
                 <h3>${data.title}</h3>
                 <p>${data.intro}</p>
+                <div class="med-focus-hint">
+                    <span class="med-hint-icon">🔔</span>
+                    <span>${data.focusHint || '专注冥想即可，时间到会有提醒'}</span>
+                </div>
             </div>
             <div class="meditation-setup" id="meditation-setup">
                 <div class="duration-options">
@@ -27,6 +79,13 @@ const MeditationModule = (() => {
                     `).join('')}
                 </div>
                 <button class="meditation-start-btn" id="meditation-start">${data.startBtn}</button>
+            </div>
+            <div class="meditation-prepare" id="meditation-prepare" style="display:none;">
+                <div class="prepare-circle">
+                    <div class="prepare-countdown" id="prepare-countdown">15</div>
+                </div>
+                <p class="prepare-text">${data.prepareMsg || '准备进入冥想...'}</p>
+                <p class="prepare-sub">${data.prepareSub || '调整姿势，闭上眼睛，深呼吸...'}</p>
             </div>
             <div class="meditation-active" id="meditation-active" style="display:none;">
                 <div class="meditation-timer" id="meditation-timer">05:00</div>
@@ -53,10 +112,29 @@ const MeditationModule = (() => {
             });
         });
 
-        document.getElementById('meditation-start')?.addEventListener('click', () => startMeditation(selectedMins));
+        document.getElementById('meditation-start')?.addEventListener('click', () => startPrepare(selectedMins));
         document.getElementById('med-pause')?.addEventListener('click', togglePause);
         document.getElementById('med-stop')?.addEventListener('click', stopMeditation);
         document.getElementById('med-return')?.addEventListener('click', () => init());
+    }
+
+    // 15秒准备倒计时
+    function startPrepare(mins) {
+        document.getElementById('meditation-setup').style.display = 'none';
+        document.getElementById('meditation-prepare').style.display = '';
+        playSingingBowl(6);
+
+        let countdown = 15;
+        const el = document.getElementById('prepare-countdown');
+        const prepTimer = setInterval(() => {
+            countdown--;
+            if (el) el.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(prepTimer);
+                document.getElementById('meditation-prepare').style.display = 'none';
+                startMeditation(mins);
+            }
+        }, 1000);
     }
 
     function startMeditation(mins) {
@@ -66,7 +144,6 @@ const MeditationModule = (() => {
         isPaused = false;
         guideIdx = 0;
 
-        document.getElementById('meditation-setup').style.display = 'none';
         document.getElementById('meditation-active').style.display = '';
         document.getElementById('meditation-complete').style.display = 'none';
 
@@ -74,12 +151,20 @@ const MeditationModule = (() => {
         startBreathCycle();
         showGuideText();
 
+        // 持续播放颂钵背景音
+        playSingingBowl(8);
+        bowlInterval = setInterval(() => {
+            if (!isPaused) playSingingBowl(8);
+        }, 12000);
+
         timer = setInterval(() => {
             if (isPaused) return;
             elapsed++;
             updateTimerDisplay();
             if (elapsed >= totalSeconds) {
                 clearTimers();
+                playBell(); // 结束提醒铃声
+                setTimeout(() => playBell(), 1500);
                 document.getElementById('meditation-active').style.display = 'none';
                 document.getElementById('meditation-complete').style.display = '';
             }
@@ -139,6 +224,7 @@ const MeditationModule = (() => {
 
     function stopMeditation() {
         clearTimers();
+        playBell();
         document.getElementById('meditation-active').style.display = 'none';
         document.getElementById('meditation-complete').style.display = '';
     }
@@ -146,6 +232,7 @@ const MeditationModule = (() => {
     function clearTimers() {
         if (timer) { clearInterval(timer); timer = null; }
         if (guideTimer) { clearInterval(guideTimer); guideTimer = null; }
+        if (bowlInterval) { clearInterval(bowlInterval); bowlInterval = null; }
     }
 
     return { init };
