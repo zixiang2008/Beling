@@ -2299,6 +2299,26 @@ textarea {
     transition: opacity 0.5s ease;
 }
 
+.med-voice-toggle {
+    display: block;
+    margin: 10px auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.med-voice-toggle:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-accent);
+    border-color: var(--border-glow);
+}
+
 .meditation-controls {
     display: flex;
     gap: 12px;
@@ -3201,7 +3221,56 @@ textarea {
 
 .balloon-complete-sub {
     color: var(--text-secondary, #a0a0b8);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkout-section {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.checkout-question {
+    font-size: 0.95rem;
+    color: var(--text-accent);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.checkout-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    resize: vertical;
+    transition: border-color 0.2s;
+    margin-bottom: 10px;
+}
+
+.checkout-textarea:focus {
+    border-color: var(--accent-purple);
+}
+
+.checkout-save-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    background: var(--gradient-main);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.checkout-save-btn.saved {
+    background: var(--accent-green);
 }
 
 .practice-start-btn,

@@ -25,16 +25,13 @@ const I18n = (() => {
                 knowledge: '觉察理论', counselor: '导师链接'
             },
             cards: {
-                emotions: { title: '情绪罗盘', desc: '探索120+种情绪' },
-                questioning: { title: '深度发问', desc: '多维度自我探索' },
-                recall: { title: '24h 回忆', desc: '觉察过去24小时' },
-                meditation: { title: '冥想空间', desc: '觉察练习从这里开始' },
-                brain: { title: '感受模式', desc: '从思考切换到感受' },
-                dialogue: { title: '觉察对话', desc: '与内在角色对话' },
-                actions: { title: '行动建议', desc: '用身体放下头脑' },
-                sharing: { title: '分享句式', desc: 'T语言沟通模板' },
-                knowledge: { title: '觉察理论', desc: '身心灵整合疗愈知识' },
-                counselor: { title: '导师链接', desc: '专业导师线上支持' }
+                emotions: { title: '情绪罗盘', desc: '我想理解我的感受' },
+                questioning: { title: '深度探索', desc: '我想探索内心' },
+                recall: { title: '24h 回忆', desc: '我想回顾今天的感受' },
+                meditation: { title: '冥想空间', desc: '我需要安静下来' },
+                brain: { title: '感受模式', desc: '我想走出头脑' },
+                knowledge: { title: '知识库', desc: '我想学习觉察方法' },
+                counselor: { title: '导师链接', desc: '我需要专业支持' }
             },
             filters: { all: '全部', negative: '不舒服的感受', neutral: '中性', positive: '舒服的感受' },
             emotionDetail: { scene: '🎯 常见场景', suggestions: '💡 建议方法', tags: '🏷️ 相关标签', intensity: '强度' },
@@ -43,7 +40,7 @@ const I18n = (() => {
             auth: {
                 loginTitle: '登录觉察',
                 loginDesc: '请输入你的用户名和PIN码',
-                username: '用户名（2位汉字）',
+                username: '用户名（2-20位字符）',
                 pin: 'PIN码（4位数字）',
                 login: '登录',
                 register: '注册新账号',
@@ -51,7 +48,7 @@ const I18n = (() => {
                 switchToRegister: '没有账号？注册',
                 registerTitle: '注册觉察',
                 registerDesc: '创建你的觉察账号',
-                error: { usernameFormat: '用户名需要2位汉字', pinFormat: 'PIN码需要4位数字', wrongCredentials: '用户名或PIN码错误', userExists: '该用户名已被注册', registerSuccess: '注册成功！请登录' },
+                error: { usernameFormat: '用户名需要2-20位字符（中英文/数字）', pinFormat: 'PIN码需要4位数字', wrongCredentials: '用户名或PIN码错误', userExists: '该用户名已被注册', registerSuccess: '注册成功！请登录' },
                 loginRequired: '此功能需要登录',
                 loggedAs: '当前用户',
                 logout: '退出'
@@ -74,16 +71,13 @@ const I18n = (() => {
                 knowledge: 'Awareness Theory', counselor: 'Mentor Connect'
             },
             cards: {
-                emotions: { title: 'Emotion Compass', desc: 'Explore 120+ emotions' },
-                questioning: { title: 'Deep Inquiry', desc: 'Multi-dimensional self-exploration' },
-                recall: { title: '24h Recall', desc: 'Review the past 24 hours' },
-                meditation: { title: 'Meditation', desc: 'Awareness practice starts here' },
-                brain: { title: 'Feeling Mode', desc: 'Switch from thinking to feeling' },
-                dialogue: { title: 'Inner Dialogue', desc: 'Talk with inner characters' },
-                actions: { title: 'Action Tips', desc: 'Quiet the mind through body' },
-                sharing: { title: 'T-Language', desc: 'Communication templates' },
-                knowledge: { title: 'Awareness Theory', desc: 'Mind-Body-Spirit healing' },
-                counselor: { title: 'Mentor Connect', desc: 'Professional mentor support' }
+                emotions: { title: 'Emotion Compass', desc: 'I want to understand my feelings' },
+                questioning: { title: 'Deep Inquiry', desc: 'I want to explore within' },
+                recall: { title: '24h Recall', desc: 'I want to review today\'s feelings' },
+                meditation: { title: 'Meditation', desc: 'I need to calm down' },
+                brain: { title: 'Feeling Mode', desc: 'I want to get out of my head' },
+                knowledge: { title: 'Knowledge Hub', desc: 'I want to learn awareness methods' },
+                counselor: { title: 'Mentor Connect', desc: 'I need professional support' }
             },
             filters: { all: 'All', negative: 'Uncomfortable', neutral: 'Neutral', positive: 'Comfortable' },
             emotionDetail: { scene: '🎯 Common Scenes', suggestions: '💡 Suggestions', tags: '🏷️ Tags', intensity: 'Intensity' },
@@ -92,7 +86,7 @@ const I18n = (() => {
             auth: {
                 loginTitle: 'Login',
                 loginDesc: 'Enter your username and PIN',
-                username: 'Username (2 Chinese chars)',
+                username: 'Username (2-20 characters)',
                 pin: 'PIN (4 digits)',
                 login: 'Login',
                 register: 'Register',
@@ -100,7 +94,7 @@ const I18n = (() => {
                 switchToRegister: 'No account? Register',
                 registerTitle: 'Register',
                 registerDesc: 'Create your awareness account',
-                error: { usernameFormat: 'Username must be 2 Chinese characters', pinFormat: 'PIN must be 4 digits', wrongCredentials: 'Wrong username or PIN', userExists: 'Username already taken', registerSuccess: 'Registered! Please login' },
+                error: { usernameFormat: 'Username must be 2-20 characters (letters/numbers/Chinese)', pinFormat: 'PIN must be 4 digits', wrongCredentials: 'Wrong username or PIN', userExists: 'Username already taken', registerSuccess: 'Registered! Please login' },
                 loginRequired: 'Login required for this feature',
                 loggedAs: 'User',
                 logout: 'Logout'
@@ -123,16 +117,13 @@ const I18n = (() => {
                 knowledge: '気づき理論', counselor: 'メンター'
             },
             cards: {
-                emotions: { title: '感情コンパス', desc: '120+の感情を探索' },
-                questioning: { title: '深い問い', desc: '多次元の自己探求' },
-                recall: { title: '24時間振り返り', desc: '過去24時間を振り返る' },
-                meditation: { title: '瞑想空間', desc: '気づきの練習はここから' },
-                brain: { title: '感覚モード', desc: '思考から感覚へ' },
-                dialogue: { title: '内なる対話', desc: '内なるキャラクターと対話' },
-                actions: { title: 'アクション', desc: '体で心を解放する' },
-                sharing: { title: 'T言語', desc: 'コミュニケーションテンプレート' },
-                knowledge: { title: '気づき理論', desc: '心身霊統合ヒーリング' },
-                counselor: { title: 'メンター', desc: '専門メンターサポート' }
+                emotions: { title: '感情コンパス', desc: '自分の感情を理解したい' },
+                questioning: { title: '深い問い', desc: '内心を探求したい' },
+                recall: { title: '24時間振り返り', desc: '今日の感覚を振り返りたい' },
+                meditation: { title: '瞑想空間', desc: '静かになりたい' },
+                brain: { title: '感覚モード', desc: '頭から抜け出したい' },
+                knowledge: { title: '知識ハブ', desc: '気づきの方法を学びたい' },
+                counselor: { title: 'メンター', desc: '専門的なサポートが必要' }
             },
             filters: { all: '全て', negative: '不快な感情', neutral: '中性', positive: '快い感情' },
             emotionDetail: { scene: '🎯 よくある場面', suggestions: '💡 おすすめの方法', tags: '🏷️ タグ', intensity: '強度' },
@@ -141,7 +132,7 @@ const I18n = (() => {
             auth: {
                 loginTitle: 'ログイン',
                 loginDesc: 'ユーザー名とPINを入力',
-                username: 'ユーザー名（漢字2文字）',
+                username: 'ユーザー名（2-20文字）',
                 pin: 'PIN（数字4桁）',
                 login: 'ログイン',
                 register: '新規登録',
@@ -149,7 +140,7 @@ const I18n = (() => {
                 switchToRegister: 'アカウントをお持ちでない方',
                 registerTitle: '新規登録',
                 registerDesc: '気づきアカウントを作成',
-                error: { usernameFormat: 'ユーザー名は漢字2文字', pinFormat: 'PINは数字4桁', wrongCredentials: 'ユーザー名またはPINが違います', userExists: 'このユーザー名は登録済み', registerSuccess: '登録完了！ログインしてください' },
+                error: { usernameFormat: 'ユーザー名は2-20文字（英数字/漢字）', pinFormat: 'PINは数字4桁', wrongCredentials: 'ユーザー名またはPINが違います', userExists: 'このユーザー名は登録済み', registerSuccess: '登録完了！ログインしてください' },
                 loginRequired: 'この機能にはログインが必要です',
                 loggedAs: 'ユーザー',
                 logout: 'ログアウト'
@@ -172,16 +163,13 @@ const I18n = (() => {
                 knowledge: 'ทฤษฎีการตระหนักรู้', counselor: 'เชื่อมต่อที่ปรึกษา'
             },
             cards: {
-                emotions: { title: 'เข็มทิศอารมณ์', desc: 'สำรวจ 120+ อารมณ์' },
-                questioning: { title: 'คำถามลึก', desc: 'สำรวจตัวเองหลายมิติ' },
-                recall: { title: 'ทบทวน 24 ชม.', desc: 'ทบทวน 24 ชั่วโมงที่ผ่านมา' },
-                meditation: { title: 'พื้นที่สมาธิ', desc: 'เริ่มฝึกตระหนักรู้ที่นี่' },
-                brain: { title: 'โหมดความรู้สึก', desc: 'เปลี่ยนจากคิดเป็นรู้สึก' },
-                dialogue: { title: 'บทสนทนาภายใน', desc: 'สนทนากับตัวตนภายใน' },
-                actions: { title: 'คำแนะนำ', desc: 'ปล่อยใจด้วยร่างกาย' },
-                sharing: { title: 'ภาษา T', desc: 'แม่แบบการสื่อสาร' },
-                knowledge: { title: 'ทฤษฎีการตระหนักรู้', desc: 'ความรู้เยียวยาบูรณาการ' },
-                counselor: { title: 'เชื่อมต่อที่ปรึกษา', desc: 'การสนับสนุนจากที่ปรึกษา' }
+                emotions: { title: 'เข็มทิศอารมณ์', desc: 'ฉันอยากเข้าใจความรู้สึกของฉัน' },
+                questioning: { title: 'คำถามลึก', desc: 'ฉันอยากสำรวจภายใน' },
+                recall: { title: 'ทบทวน 24 ชม.', desc: 'ฉันอยากทบทวนความรู้สึกวันนี้' },
+                meditation: { title: 'พื้นที่สมาธิ', desc: 'ฉันต้องการความสงบ' },
+                brain: { title: 'โหมดความรู้สึก', desc: 'ฉันอยากออกจากหัว' },
+                knowledge: { title: 'ห้องสมุดความรู้', desc: 'ฉันอยากเรียนรู้วิธีตระหนักรู้' },
+                counselor: { title: 'เชื่อมต่อที่ปรึกษา', desc: 'ฉันต้องการการสนับสนุน' }
             },
             filters: { all: 'ทั้งหมด', negative: 'ไม่สบายใจ', neutral: 'เป็นกลาง', positive: 'สบายใจ' },
             emotionDetail: { scene: '🎯 สถานการณ์ที่พบบ่อย', suggestions: '💡 คำแนะนำ', tags: '🏷️ แท็ก', intensity: 'ความเข้มข้น' },
@@ -190,7 +178,7 @@ const I18n = (() => {
             auth: {
                 loginTitle: 'เข้าสู่ระบบ',
                 loginDesc: 'กรอกชื่อผู้ใช้และ PIN',
-                username: 'ชื่อผู้ใช้ (อักษรจีน 2 ตัว)',
+                username: 'ชื่อผู้ใช้ (2-20 ตัวอักษร)',
                 pin: 'PIN (ตัวเลข 4 หลัก)',
                 login: 'เข้าสู่ระบบ',
                 register: 'ลงทะเบียน',
@@ -198,7 +186,7 @@ const I18n = (() => {
                 switchToRegister: 'ยังไม่มีบัญชี? ลงทะเบียน',
                 registerTitle: 'ลงทะเบียน',
                 registerDesc: 'สร้างบัญชีของคุณ',
-                error: { usernameFormat: 'ชื่อผู้ใช้ต้องเป็นอักษรจีน 2 ตัว', pinFormat: 'PIN ต้องเป็นตัวเลข 4 หลัก', wrongCredentials: 'ชื่อผู้ใช้หรือ PIN ไม่ถูกต้อง', userExists: 'ชื่อผู้ใช้นี้ถูกใช้แล้ว', registerSuccess: 'ลงทะเบียนสำเร็จ! กรุณาเข้าสู่ระบบ' },
+                error: { usernameFormat: 'ชื่อผู้ใช้ต้องมี 2-20 ตัวอักษร', pinFormat: 'PIN ต้องเป็นตัวเลข 4 หลัก', wrongCredentials: 'ชื่อผู้ใช้หรือ PIN ไม่ถูกต้อง', userExists: 'ชื่อผู้ใช้นี้ถูกใช้แล้ว', registerSuccess: 'ลงทะเบียนสำเร็จ! กรุณาเข้าสู่ระบบ' },
                 loginRequired: 'ฟีเจอร์นี้ต้องเข้าสู่ระบบ',
                 loggedAs: 'ผู้ใช้',
                 logout: 'ออกจากระบบ'

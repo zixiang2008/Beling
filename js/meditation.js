@@ -7,6 +7,21 @@ const MeditationModule = (() => {
     const durations = [3, 5, 10, 15]; // minutes
     let timer = null, elapsed = 0, totalSeconds = 0, isPaused = false, guideIdx = 0, guideTimer = null;
     let audioCtx = null, bowlInterval = null;
+    let voiceEnabled = true;
+
+    // ---- Speech Synthesis: 语音引导 ----
+    const langMap = { zh: 'zh-CN', en: 'en-US', ja: 'ja-JP', th: 'th-TH' };
+
+    function speak(text) {
+        if (!voiceEnabled || !window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+        const utt = new SpeechSynthesisUtterance(text);
+        utt.lang = langMap[I18n.getLang()] || 'zh-CN';
+        utt.rate = 0.85;
+        utt.pitch = 1;
+        utt.volume = 0.8;
+        window.speechSynthesis.speak(utt);
+    }
 
     // ---- Web Audio API: 颂钵音效 ----
     function getAudioCtx() {
@@ -91,6 +106,9 @@ const MeditationModule = (() => {
                 <div class="meditation-timer" id="meditation-timer">05:00</div>
                 <div class="meditation-breath" id="meditation-breath"></div>
                 <div class="meditation-guide-text" id="meditation-guide-text"></div>
+                <button class="med-voice-toggle" id="med-voice-toggle" title="${data.voiceToggle || '语音引导'}">
+                    ${voiceEnabled ? '🔊' : '🔇'}
+                </button>
                 <div class="meditation-controls">
                     <button class="med-ctrl-btn" id="med-pause">${data.pauseBtn}</button>
                     <button class="med-ctrl-btn" id="med-stop">${data.stopBtn}</button>
@@ -116,6 +134,12 @@ const MeditationModule = (() => {
         document.getElementById('med-pause')?.addEventListener('click', togglePause);
         document.getElementById('med-stop')?.addEventListener('click', stopMeditation);
         document.getElementById('med-return')?.addEventListener('click', () => init());
+        document.getElementById('med-voice-toggle')?.addEventListener('click', () => {
+            voiceEnabled = !voiceEnabled;
+            const btn = document.getElementById('med-voice-toggle');
+            if (btn) btn.textContent = voiceEnabled ? '🔊' : '🔇';
+            if (!voiceEnabled) window.speechSynthesis?.cancel();
+        });
     }
 
     // 15秒准备倒计时
@@ -123,6 +147,8 @@ const MeditationModule = (() => {
         document.getElementById('meditation-setup').style.display = 'none';
         document.getElementById('meditation-prepare').style.display = '';
         playSingingBowl(6);
+        const data = getData();
+        speak(data.prepareMsg || '准备进入冥想');
 
         let countdown = 15;
         const el = document.getElementById('prepare-countdown');
@@ -195,6 +221,7 @@ const MeditationModule = (() => {
             if (!document.getElementById('meditation-breath')) return;
             breathEl.textContent = phases[phase];
             breathEl.className = 'meditation-breath phase-' + phase;
+            if (phase === 0 || phase === 2) speak(phases[phase]);
             setTimeout(() => {
                 phase = (phase + 1) % 4;
                 if (document.getElementById('meditation-breath')) cycle();
@@ -209,8 +236,10 @@ const MeditationModule = (() => {
         if (!el || !data?.guides) return;
         el.style.opacity = '0';
         setTimeout(() => {
-            el.textContent = data.guides[guideIdx % data.guides.length];
+            const text = data.guides[guideIdx % data.guides.length];
+            el.textContent = text;
             el.style.opacity = '1';
+            speak(text);
             guideIdx++;
         }, 500);
     }
@@ -225,6 +254,7 @@ const MeditationModule = (() => {
     function stopMeditation() {
         clearTimers();
         playBell();
+        window.speechSynthesis?.cancel();
         document.getElementById('meditation-active').style.display = 'none';
         document.getElementById('meditation-complete').style.display = '';
     }

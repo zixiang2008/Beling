@@ -106,10 +106,24 @@ const BrainModule = (() => {
                 <h3>${data.completeMsg || '练习完成！'}</h3>
                 <p>${practice.icon} ${practice.title}</p>
                 <p class="balloon-complete-sub">${data.completeSub || '很好，你刚刚给了自己一段觉察时光'}</p>
+                <div class="checkout-section">
+                    <p class="checkout-question">${data.checkoutQ || '✨ 与练习前相比，你现在的感受如何？'}</p>
+                    <textarea class="checkout-textarea" id="checkout-textarea" placeholder="${data.checkoutPlaceholder || '写下你此刻的感受……'}"></textarea>
+                    <button class="checkout-save-btn" id="checkout-save">${data.checkoutSave || '💾 保存反思'}</button>
+                </div>
                 <button class="meditation-start-btn" id="balloon-return">${data.returnBtn || '返回'}</button>
             </div>
         `;
         document.getElementById('balloon-return')?.addEventListener('click', () => init());
+        document.getElementById('checkout-save')?.addEventListener('click', () => {
+            const text = document.getElementById('checkout-textarea')?.value?.trim();
+            if (!text) return;
+            const reflections = JSON.parse(localStorage.getItem('sa_brain_reflections') || '[]');
+            reflections.unshift({ practice: practice.title, text, date: new Date().toISOString() });
+            localStorage.setItem('sa_brain_reflections', JSON.stringify(reflections));
+            const btn = document.getElementById('checkout-save');
+            if (btn) { btn.textContent = data.checkoutSaved || '已保存 ✓'; btn.classList.add('saved'); }
+        });
     }
 
     function formatTime(secs) {

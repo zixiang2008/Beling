@@ -12,9 +12,6 @@
         recall: RecallModule,
         meditation: MeditationModule,
         brain: BrainModule,
-        dialogue: DialogueModule,
-        actions: ActionsModule,
-        sharing: SharingModule,
         knowledge: KnowledgeModule,
         counselor: CounselorModule
     };
@@ -59,7 +56,6 @@
         const el = document.getElementById('home-greeting');
         if (!el) return;
         if (greetingTimer) { clearInterval(greetingTimer); greetingTimer = null; }
-        const langs = ['zh', 'en', 'ja', 'th'];
         const h = new Date().getHours();
         let timeKey;
         if (h < 11) timeKey = 'morning';
@@ -67,29 +63,10 @@
         else if (h < 18) timeKey = 'afternoon';
         else timeKey = 'evening';
 
-        // Build greetings for all languages
-        const greetings = langs.map(lang => {
-            const g = I18n.tLang('greeting.' + timeKey, lang);
-            const s = I18n.tLang('greetingSuffix', lang);
-            return g + s;
-        });
-
-        // Start with current language
-        const curLang = I18n.getLang();
-        let idx = langs.indexOf(curLang);
-        if (idx < 0) idx = 0;
-        el.textContent = greetings[idx];
-        el.style.transition = 'opacity 0.5s ease';
-
-        // Cycle through languages
-        greetingTimer = setInterval(() => {
-            el.style.opacity = '0';
-            setTimeout(() => {
-                idx = (idx + 1) % langs.length;
-                el.textContent = greetings[idx];
-                el.style.opacity = '1';
-            }, 500);
-        }, 4000);
+        // Show only current language greeting (no cycling)
+        const g = t('greeting.' + timeKey);
+        const s = t('greetingSuffix');
+        el.textContent = g + s;
     }
 
     function setupDailyQuote() {

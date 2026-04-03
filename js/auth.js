@@ -27,7 +27,7 @@ const Auth = (() => {
     }
 
     function isValidUsername(name) {
-        return /^[\u4e00-\u9fff]{2}$/.test(name);
+        return /^[\u4e00-\u9fffa-zA-Z0-9_]{2,20}$/.test(name);
     }
 
     function isValidPin(pin) {
@@ -106,7 +106,7 @@ const Auth = (() => {
                     <h3 class="auth-title">${title}</h3>
                     <p class="auth-desc">${desc}</p>
                     <div class="auth-form">
-                        <input type="text" class="auth-input" id="auth-username" placeholder="${t('auth.username')}" maxlength="2" autocomplete="off" />
+                        <input type="text" class="auth-input" id="auth-username" placeholder="${t('auth.username')}" maxlength="20" autocomplete="off" />
                         <input type="password" class="auth-input" id="auth-pin" placeholder="${t('auth.pin')}" maxlength="4" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
                         <div class="auth-error" id="auth-error"></div>
                         <button class="auth-submit-btn" id="auth-submit">${btnText}</button>
