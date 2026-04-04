@@ -19,6 +19,7 @@
 
     function initApp() {
         I18n.init();
+        ThemeManager.init();
         I18n.updateDOM();
         setupGreeting();
         setupDailyQuote();

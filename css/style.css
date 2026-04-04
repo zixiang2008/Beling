@@ -4,7 +4,8 @@
    ============================================ */
 
 /* ---- CSS Variables ---- */
-:root {
+:root,
+[data-theme="dark"] {
     --bg-primary: #0a0a1a;
     --bg-secondary: #111128;
     --bg-card: rgba(255, 255, 255, 0.04);
@@ -45,6 +46,71 @@
 
     --font-sans: 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'Noto Serif SC', Georgia, serif;
+
+    --splash-bg: #0a0a1a;
+    --header-bg: rgba(10, 10, 26, 0.85);
+    --nav-bg: rgba(10, 10, 26, 0.92);
+}
+
+/* ---- Light Theme: 柔光白 ---- */
+[data-theme="light"] {
+    --bg-primary: #f5f3ff;
+    --bg-secondary: #ede9fe;
+    --bg-card: rgba(139, 92, 246, 0.06);
+    --bg-card-hover: rgba(139, 92, 246, 0.12);
+    --bg-glass: rgba(139, 92, 246, 0.08);
+    --border-subtle: rgba(139, 92, 246, 0.12);
+    --border-glow: rgba(139, 92, 246, 0.35);
+
+    --text-primary: #1e1b4b;
+    --text-secondary: rgba(30, 27, 75, 0.65);
+    --text-muted: rgba(30, 27, 75, 0.4);
+    --text-accent: #7c3aed;
+
+    --accent-purple: #7c3aed;
+    --accent-blue: #4f46e5;
+
+    --gradient-main: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+    --gradient-calm: linear-gradient(135deg, #c4b5fd 0%, #f0abfc 100%);
+
+    --shadow-sm: 0 2px 8px rgba(139, 92, 246, 0.1);
+    --shadow-md: 0 4px 20px rgba(139, 92, 246, 0.12);
+    --shadow-lg: 0 8px 40px rgba(139, 92, 246, 0.15);
+    --shadow-glow: 0 0 30px rgba(139, 92, 246, 0.1);
+
+    --splash-bg: #f5f3ff;
+    --header-bg: rgba(245, 243, 255, 0.9);
+    --nav-bg: rgba(245, 243, 255, 0.95);
+}
+
+/* ---- Nature Theme: 自然绿 ---- */
+[data-theme="nature"] {
+    --bg-primary: #0c1a14;
+    --bg-secondary: #132a1e;
+    --bg-card: rgba(20, 184, 166, 0.06);
+    --bg-card-hover: rgba(20, 184, 166, 0.12);
+    --bg-glass: rgba(20, 184, 166, 0.08);
+    --border-subtle: rgba(20, 184, 166, 0.12);
+    --border-glow: rgba(20, 184, 166, 0.35);
+
+    --text-primary: #e0f2f1;
+    --text-secondary: rgba(224, 242, 241, 0.65);
+    --text-muted: rgba(224, 242, 241, 0.4);
+    --text-accent: #5eead4;
+
+    --accent-purple: #14b8a6;
+    --accent-blue: #0d9488;
+
+    --gradient-main: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    --gradient-calm: linear-gradient(135deg, #5eead4 0%, #a7f3d0 100%);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 30px rgba(20, 184, 166, 0.15);
+
+    --splash-bg: #0c1a14;
+    --header-bg: rgba(12, 26, 20, 0.85);
+    --nav-bg: rgba(12, 26, 20, 0.92);
 }
 
 /* ---- Reset & Base ---- */
@@ -191,7 +257,7 @@ textarea {
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    background: rgba(10, 10, 26, 0.85);
+    background: var(--header-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-subtle);
@@ -263,7 +329,7 @@ textarea {
     width: 100%;
     max-width: 480px;
     height: var(--nav-height);
-    background: rgba(10, 10, 26, 0.92);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid var(--border-subtle);
@@ -1878,6 +1944,35 @@ textarea {
     .home-card {
         padding: 14px 12px;
     }
+}
+
+/* ---- Theme Toggle ---- */
+.theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--bg-card-hover);
+    transform: rotate(20deg);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.9);
+}
+
+.theme-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
 
 /* ---- Language Selector ---- */

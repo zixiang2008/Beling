@@ -6,7 +6,7 @@
 const I18n = (() => {
     const SUPPORTED = ['zh', 'en', 'ja', 'th'];
     const STORAGE_KEY = 'sa_lang';
-    let currentLang = 'zh';
+    let currentLang = 'en';
 
     // ---- UI 通用翻译 ----
     const ui = {
