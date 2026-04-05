@@ -224,6 +224,11 @@ Real-time switch, no page reload needed.
 
 ## 📋 Changelog
 
+### v3.0.1 — 2026-04-05
+- Fixed Knowledge Hub subtitle not displaying
+- Fixed More menu showing legacy title
+- Version badge updated to v3.0.1
+
 ### v3.0.0 — 2026-04-05
 - 🧘 **Meditation v3** — Professional-grade immersive experience
   - 🎵 6 ambient sounds via Web Audio API synthesis
@@ -467,6 +472,11 @@ BeingYourself/
 ---
 
 ## 📋 更新日志
+
+### v3.0.1 — 2026-04-05
+- 修复知识库副标题（身心灵疗愈体系）未显示
+- 修复 More 菜单仍显示旧标题
+- 版本号更新至 v3.0.1
 
 ### v3.0.0 — 2026-04-05
 - 🧘 **冥想空间 v3** — 专业级沉浸体验
