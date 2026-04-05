@@ -218,8 +218,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/zixiang2008/TGroup.git
-cd TGroup
+git clone https://github.com/zixiang2008/Beling.git
+cd BeingYourself
 
 # 直接在浏览器打开
 start index.html
@@ -233,7 +233,7 @@ npx http-server . -p 8080 -o
 ### 项目结构
 
 ```
-TGroup/
+BeingYourself/
 ├── index.html              # 主入口（SPA 单页应用）
 ├── css/
 │   └── style.css           # 全局样式（2600+ 行，深色主题/玻璃拟态/动画）
@@ -303,8 +303,8 @@ Visit 👉 [https://selfawareness.netlify.app/](https://selfawareness.netlify.ap
 Or run locally:
 
 ```bash
-git clone https://github.com/zixiang2008/TGroup.git
-cd TGroup
+git clone https://github.com/zixiang2008/Beling.git
+cd BeingYourself
 npx http-server . -p 8080 -o
 ```
 
