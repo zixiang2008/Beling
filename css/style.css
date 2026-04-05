@@ -674,6 +674,36 @@ textarea {
 .app-version-bar {
     text-align: center;
     padding: 18px 0 4px;
+
+}
+
+/* Wide Card (full row, compact) */
+.home-card-wide {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px !important;
+    min-height: auto !important;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+}
+
+.home-card-wide .home-card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.home-card-wide .home-card-title {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.home-card-wide .home-card-desc {
+    display: none;
 }
 
 .app-version-label {

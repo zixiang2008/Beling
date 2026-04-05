@@ -4,7 +4,7 @@
    ============================================ */
 
 const I18n = (() => {
-    const SUPPORTED = ['zh', 'en', 'ja', 'th'];
+    const SUPPORTED = ['en', 'zh', 'ja', 'th'];
     const STORAGE_KEY = 'sa_lang';
     let currentLang = 'en';
 
@@ -30,7 +30,7 @@ const I18n = (() => {
                 recall: { title: '24h 回忆', desc: '我想回顾今天的感受' },
                 meditation: { title: '冥想空间', desc: '我需要安静下来' },
                 brain: { title: '感受模式', desc: '我想走出头脑' },
-                knowledge: { title: '知识库', desc: '我想学习觉察方法' },
+                knowledge: { title: '一起学习成长', desc: '我想学习觉察方法' },
                 counselor: { title: '导师链接', desc: '我需要专业支持' }
             },
             filters: { all: '全部', negative: '不舒服的感受', neutral: '中性', positive: '舒服的感受' },
@@ -76,7 +76,7 @@ const I18n = (() => {
                 recall: { title: '24h Recall', desc: 'I want to review today\'s feelings' },
                 meditation: { title: 'Meditation', desc: 'I need to calm down' },
                 brain: { title: 'Feeling Mode', desc: 'I want to get out of my head' },
-                knowledge: { title: 'Knowledge Hub', desc: 'I want to learn awareness methods' },
+                knowledge: { title: 'Learn & Grow Together', desc: 'I want to learn awareness methods' },
                 counselor: { title: 'Mentor Connect', desc: 'I need professional support' }
             },
             filters: { all: 'All', negative: 'Uncomfortable', neutral: 'Neutral', positive: 'Comfortable' },
@@ -122,7 +122,7 @@ const I18n = (() => {
                 recall: { title: '24時間振り返り', desc: '今日の感覚を振り返りたい' },
                 meditation: { title: '瞑想空間', desc: '静かになりたい' },
                 brain: { title: '感覚モード', desc: '頭から抜け出したい' },
-                knowledge: { title: '知識ハブ', desc: '気づきの方法を学びたい' },
+                knowledge: { title: '一緒に学び成長', desc: '気づきの方法を学びたい' },
                 counselor: { title: 'メンター', desc: '専門的なサポートが必要' }
             },
             filters: { all: '全て', negative: '不快な感情', neutral: '中性', positive: '快い感情' },
@@ -168,7 +168,7 @@ const I18n = (() => {
                 recall: { title: 'ทบทวน 24 ชม.', desc: 'ฉันอยากทบทวนความรู้สึกวันนี้' },
                 meditation: { title: 'พื้นที่สมาธิ', desc: 'ฉันต้องการความสงบ' },
                 brain: { title: 'โหมดความรู้สึก', desc: 'ฉันอยากออกจากหัว' },
-                knowledge: { title: 'ห้องสมุดความรู้', desc: 'ฉันอยากเรียนรู้วิธีตระหนักรู้' },
+                knowledge: { title: 'เรียนรู้และเติบโตด้วยกัน', desc: 'ฉันอยากเรียนรู้วิธีตระหนักรู้' },
                 counselor: { title: 'เชื่อมต่อที่ปรึกษา', desc: 'ฉันต้องการการสนับสนุน' }
             },
             filters: { all: 'ทั้งหมด', negative: 'ไม่สบายใจ', neutral: 'เป็นกลาง', positive: 'สบายใจ' },
