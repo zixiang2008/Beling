@@ -224,6 +224,11 @@ Real-time switch, no page reload needed.
 
 ## 📋 Changelog
 
+### v3.0.2 — 2026-04-05
+- Fixed home page "Learn & Grow" card missing subtitle
+- Fixed meditation audio engine compatibility (StereoPanner fallback)
+- Added i18n subtitle key for Knowledge card (4 languages)
+
 ### v3.0.1 — 2026-04-05
 - Fixed Knowledge Hub subtitle not displaying
 - Fixed More menu showing legacy title
@@ -472,6 +477,11 @@ BeingYourself/
 ---
 
 ## 📋 更新日志
+
+### v3.0.2 — 2026-04-05
+- 修复首页“一起学习成长”卡片副标题未显示
+- 修复冥想音频引擎兼容性（StereoPanner 降级）
+- 四语添加知识库卡片副标题翻译
 
 ### v3.0.1 — 2026-04-05
 - 修复知识库副标题（身心灵疗愈体系）未显示

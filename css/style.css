@@ -663,6 +663,17 @@ textarea {
     z-index: 1;
 }
 
+.home-card-subtitle {
+    font-size: 0.78rem;
+    color: var(--text-accent);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
 .home-card-desc {
     font-size: 0.75rem;
     color: var(--text-muted);

@@ -140,37 +140,47 @@ const MeditationModule = (() => {
         stopNodes(activeBrainwaveNodes);
         activeBrainwaveNodes = [];
         if (id === 'none' || !brainwaveDefs[id]) return;
-        const ctx = getAudioCtx();
-        const def = brainwaveDefs[id];
+        try {
+            const ctx = getAudioCtx();
+            const def = brainwaveDefs[id];
 
-        // Left channel
-        const oscL = ctx.createOscillator();
-        oscL.type = 'sine';
-        oscL.frequency.value = def.baseFreq;
+            // Left channel
+            const oscL = ctx.createOscillator();
+            oscL.type = 'sine';
+            oscL.frequency.value = def.baseFreq;
 
-        // Right channel
-        const oscR = ctx.createOscillator();
-        oscR.type = 'sine';
-        oscR.frequency.value = def.baseFreq + def.beatFreq;
+            // Right channel
+            const oscR = ctx.createOscillator();
+            oscR.type = 'sine';
+            oscR.frequency.value = def.baseFreq + def.beatFreq;
 
-        // Stereo panning
-        const panL = ctx.createStereoPanner();
-        panL.pan.value = -1;
-        const panR = ctx.createStereoPanner();
-        panR.pan.value = 1;
+            const gainL = ctx.createGain();
+            gainL.gain.value = brainwaveVolume * 0.3;
+            const gainR = ctx.createGain();
+            gainR.gain.value = brainwaveVolume * 0.3;
 
-        const gainL = ctx.createGain();
-        gainL.gain.value = brainwaveVolume * 0.3;
-        const gainR = ctx.createGain();
-        gainR.gain.value = brainwaveVolume * 0.3;
+            // Stereo panning with fallback
+            if (ctx.createStereoPanner) {
+                const panL = ctx.createStereoPanner();
+                panL.pan.value = -1;
+                const panR = ctx.createStereoPanner();
+                panR.pan.value = 1;
+                oscL.connect(gainL); gainL.connect(panL); panL.connect(ctx.destination);
+                oscR.connect(gainR); gainR.connect(panR); panR.connect(ctx.destination);
+                activeBrainwaveNodes.push(oscL, oscR, gainL, gainR, panL, panR);
+            } else {
+                // Fallback: no stereo separation, still play both frequencies
+                oscL.connect(gainL); gainL.connect(ctx.destination);
+                oscR.connect(gainR); gainR.connect(ctx.destination);
+                activeBrainwaveNodes.push(oscL, oscR, gainL, gainR);
+            }
 
-        oscL.connect(gainL); gainL.connect(panL); panL.connect(ctx.destination);
-        oscR.connect(gainR); gainR.connect(panR); panR.connect(ctx.destination);
-
-        oscL.start(); oscR.start();
-        activeBrainwaveNodes.push(oscL, oscR, gainL, gainR, panL, panR);
-        activeBrainwaveNodes._gainL = gainL;
-        activeBrainwaveNodes._gainR = gainR;
+            oscL.start(); oscR.start();
+            activeBrainwaveNodes._gainL = gainL;
+            activeBrainwaveNodes._gainR = gainR;
+        } catch (e) {
+            console.warn('Brainwave engine error:', e);
+        }
     }
 
     function updateBrainwaveVolume(vol) {
