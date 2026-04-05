@@ -4,7 +4,7 @@
 
 (function () {
     const t = I18n.t.bind(I18n);
-    const APP_VERSION = 'v2.1.0';
+    const APP_VERSION = 'v3.0.1';
     // Direct module references — const declarations don't attach to window
     const pageModules = {
         emotions: EmotionsModule,
