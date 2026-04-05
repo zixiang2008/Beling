@@ -1,5 +1,4 @@
 # 🧘 Being Yourself — Inner Awareness Practice
-# 🧘 Being Yourself — 内在觉察练习
 
 <div align="center">
 
@@ -10,145 +9,138 @@
 
 **A mindfulness web app for deep inner self-awareness**
 
-**一款帮助你深度觉察内在感受的正念工具**
+[🌐 Live Demo](https://beingyousef.netlify.app/) · [📂 GitHub](https://github.com/zixiang2008/Beling)
 
-[🌐 Live Demo 在线体验](https://beingyousef.netlify.app/) · [📂 GitHub](https://github.com/zixiang2008/Beling)
+**[English](#-english) · [中文](#-中文)**
 
 </div>
 
 ---
 
-## ✨ What is Being Yourself? · 这是什么？
+# 🇺🇸 English
+
+## ✨ What is Being Yourself?
 
 Being Yourself is a lean, pain-point-oriented mindfulness web app. Instead of overwhelming you with tools, it asks one simple question: **"How do you feel today?"** — then guides you to explore that feeling with 7 focused modules.
 
-Being Yourself 是一款精简的、以痛点为导向的正念 Web 应用。它只问一个简单的问题：**"你今天感觉如何？"** 然后通过 7 个专注的模块引导你探索这种感受。
-
 > 🧘 *Look within, and see your authentic self.*
-> 🧘 *向内看，发现你真实的自己。*
 
-### Key Highlights · 核心亮点
+### Key Highlights
 
-| Feature · 特性 | Description · 说明 |
-|---|---|
-| 🎨 **3 Visual Themes · 3 套视觉主题** | Dark Meditation 暗夜冥想 / Soft Light 柔光 / Nature Green 自然绿 |
-| 🌍 **4 Languages · 4 种语言** | English (default 默认) / 中文 / 日本語 / ไทย — real-time switch 实时切换 |
-| 🔊 **Voice Guidance · 语音引导** | Web Speech API — no downloads needed 无需下载 |
-| 🎵 **Ambient Sounds · 环境音** | 6 soundscapes synthesized via Web Audio API 六种声景合成 |
-| 🧠 **Brainwave · 脑波频率** | 4 binaural beat modes 四种双耳节拍模式 (Delta/Theta/Alpha/Beta) |
-| 📱 **Mobile-First · 移动优先** | Touch targets · safe-area · responsive 触控优化 · 安全区 · 响应式 |
-| 🔓 **No Login Needed · 无需登录** | Most tools work without an account 大部分功能无需账号 |
+- 🎨 **3 Visual Themes** — Dark Meditation, Soft Light, Nature Green (one-click toggle)
+- 🌍 **4 Languages** — English (default), 中文, 日本語, ไทย (real-time switch)
+- 🎵 **6 Ambient Sounds** — Rain, Ocean, Forest, Fire, Wind, Singing Bowl (Web Audio API)
+- 🧠 **4 Brainwave Modes** — Delta, Theta, Alpha, Beta (binaural beats)
+- 🔊 **Voice Guidance** — Web Speech API, no downloads needed
+- 📱 **Mobile-First** — Optimized for phones with touch targets & safe-area support
+- 🔓 **No Login Required** — Most tools are fully accessible without an account
 
 ---
 
-## 🧩 Features · 功能模块
+## 🧩 Features
 
-| Module · 模块 | Icon | What It Solves · 解决什么 | Login · 登录 |
+| Module | Icon | What It Solves | Login |
 |---|---|---|---|
-| **Emotion Compass · 情绪罗盘** | 😊 | "I can't name my feelings 我说不出我的感受" — 91 emotions · scenarios · coping tips 91种情绪+场景+应对建议 | 🟢 Browse free 免费浏览 |
-| **Deep Inquiry · 深度探索** | 🔍 | "I want to explore within 我想探索内心" — 5 dimensions 五个维度 (body 身体 / emotion 情绪 / thought 思维 / relation 关系 / meaning 意义) | 🔐 Login |
-| **Feeling Mode · 感受模式** | 🧠 | "I want to get out of my head 我想走出头脑" — Left→Right brain switch 左脑→右脑切换练习 + check-out reflection 反思 | 🟢 Open |
-| **Mentor Connect · 导师链接** | 🔗 | "I need professional help 我需要专业支持" — Direct counseling link 直接链接专业咨询 | 🟢 Open |
-| **24h Recall · 24小时回忆** | ⏰ | "I want to review today 我想回顾今天" — Structured timeline review 结构化时间线回顾 | 🔐 Login |
-| **Meditation · 冥想空间** | 🧘 | "I need to calm down 我需要安静下来" — Full immersive experience 完整沉浸体验 (see below 详见下方) | 🟢 Open |
-| **Learn & Grow · 一起学习成长** | 📚 | "I want to learn methods 我想学习觉察方法" — 6 professional modalities 六大专业方法 + 3 service areas 三大服务领域 | 🟢 Open |
+| **Emotion Compass** | 😊 | "I can't name my feelings" — 91 emotions with scenarios & coping tips | 🟢 Browse free |
+| **Deep Inquiry** | 🔍 | "I want to explore within" — 5 dimensions (body, emotion, thought, relation, meaning) | 🔐 Login required |
+| **Feeling Mode** | 🧠 | "I want to get out of my head" — Left→Right brain switching + check-out reflection | 🟢 Open |
+| **Mentor Connect** | 🔗 | "I need professional support" — Direct link to counseling resources | 🟢 Open |
+| **24h Recall** | ⏰ | "I want to review today" — Structured timeline review by time of day | 🔐 Login required |
+| **Meditation** | 🧘 | "I need to calm down" — Full immersive experience (see below) | 🟢 Open |
+| **Learn & Grow** | 📚 | "I want to learn methods" — 6 professional modalities + 3 service areas | 🟢 Open |
 
 ---
 
-## 🧘 Meditation v3 · 冥想空间 v3
+## 🧘 Meditation v3
 
 A professional-grade meditation experience inspired by **Calm, Headspace, Insight Timer, myNoise** and 6 other leading platforms.
 
-参考 **Calm、Headspace、Insight Timer、myNoise** 等 10+ 专业平台打造的专业级冥想体验。
+### 🎵 Ambient Sounds (Web Audio API Synthesis)
 
-### 🎵 Ambient Sounds · 环境音 (Web Audio API)
-
-| Sound · 声音 | Synthesis · 合成方式 |
+| Sound | Synthesis Method |
 |---|---|
-| 🌧️ Rain · 雨声 | White noise + low-pass filter 白噪声+低通滤波 |
-| 🌊 Ocean · 海浪 | White noise + LFO gain modulation 白噪声+LFO调制 |
-| 🌲 Forest · 森林 | Pink noise + bandpass filter 粉噪声+带通滤波 |
-| 🔥 Fire · 篝火 | Brown noise + low-pass 棕噪声+低通 |
-| 💨 Wind · 风声 | White noise + resonant LFO 白噪声+共振LFO |
-| 🔔 Bowl · 颂钵 | Sine wave harmonics (174/285/396 Hz) 正弦波谐波 |
+| 🌧️ Rain | White noise + low-pass filter |
+| 🌊 Ocean | White noise + LFO gain modulation |
+| 🌲 Forest | Pink noise + bandpass filter |
+| 🔥 Fire | Brown noise + low-pass filter |
+| 💨 Wind | White noise + resonant LFO |
+| 🔔 Singing Bowl | Sine wave harmonics (174/285/396 Hz) |
 
-### 🧠 Brainwave · 脑波频率 (Binaural Beats · 双耳节拍)
+### 🧠 Brainwave (Binaural Beats)
 
-| Wave · 脑波 | Frequency · 频率 | Effect · 效果 |
+| Wave | Frequency | Effect |
 |---|---|---|
-| 🧘 Delta | 0.5–4 Hz | Deep sleep · Repair 深度睡眠·修复 |
-| 🌙 Theta | 4–8 Hz | Deep meditation · Creativity 深度冥想·创意 |
-| 🧠 Alpha | 8–14 Hz | Relaxation · Calm 放松·平静 |
-| ⚡ Beta | 14–30 Hz | Focus · Alertness 专注·清醒 |
+| 🧘 Delta | 0.5–4 Hz | Deep sleep & repair |
+| 🌙 Theta | 4–8 Hz | Deep meditation & creativity |
+| 🧠 Alpha | 8–14 Hz | Relaxation & calm |
+| ⚡ Beta | 14–30 Hz | Focus & alertness |
 
-> 🎧 Headphones required for binaural beats · 需要耳机体验双耳节拍
+> 🎧 Headphones required for binaural beats
 
-### ✨ Visual Animations · 冥想动画
+### ✨ Visual Animations
 
-| Animation · 动画 | Visual · 视觉效果 |
+| Animation | Visual Effect |
 |---|---|
-| 🫧 Bubbles · 气泡 | Slow-rising translucent bubbles 缓慢上升的半透明气泡 |
-| 🔔 Singing Bowl · 颂钵 | Concentric ripple expansion 同心波纹扩散 |
-| 🌿 Nature · 大自然 | Falling leaves + firefly glow 飘落树叶+萤火虫微光 |
+| 🫧 Bubbles | Slow-rising translucent bubbles |
+| 🔔 Singing Bowl | Concentric ripple expansion |
+| 🌿 Nature | Falling leaves + firefly glow |
 
-### 🎤 Guidance Modes · 引导模式
+### 🎤 Guidance Modes
 
-| Mode · 模式 | Description · 描述 |
+| Mode | Description |
 |---|---|
-| 🔇 Silent · 静默 | Ambient sound only 仅环境音 |
-| 🌬️ Breath Only · 仅呼吸 | Breath commands + bell 呼吸指令+铃声 |
-| 🎙️ Full Guide · 完整引导 | Breath + mindfulness narration + bell 呼吸+觉察引导语+铃声 |
+| 🔇 Silent | Ambient sound only |
+| 🌬️ Breath Only | Breath commands + bell chimes |
+| 🎙️ Full Guide | Breath + mindfulness narration + bell |
 
 ---
 
-## 📚 Learn & Grow Together · 一起学习成长
+## 📚 Learn & Grow Together
 
-**Subtitle · 副标题: Mind-Body-Spirit Healing · 身心灵疗愈体系**
+**Subtitle: Mind-Body-Spirit Healing System**
 
-### 🎓 Six Professional Modalities · 六大专业方法
+### 🎓 Six Professional Modalities
 
-Each method card has **hover tooltip + click-to-expand** detailed descriptions (founder, core idea, how it works, target audience).
+Each card features **hover tooltip + click-to-expand** detailed descriptions (founder, core idea, how it works, target audience).
 
-每个方法卡片都有**悬停提示+点击展开**的详细说明（创始人、核心理念、工作方式、适合人群）。
-
-| Method · 方法 | Founder · 创始人 |
+| Method | Founder |
 |---|---|
-| 💜 Compassionate Inquiry · 慈悲探询 | Dr. Gabor Maté |
-| 🪞 Internal Family Systems (IFS) · 内在家族系统 | Dr. Richard Schwartz |
-| 🌊 NARM · 神经情感关系模型 | Dr. Laurence Heller |
-| 🌑 Shadow Constellation · 阴影排列 | Nir Esterman |
-| 🌱 Holistic Life Coaching · 全人生活教练 | Alan Cohen |
-| 💎 Diamond Approach · 钻石途径 | A.H. Almaas |
+| 💜 Compassionate Inquiry | Dr. Gabor Maté |
+| 🪞 Internal Family Systems (IFS) | Dr. Richard Schwartz |
+| 🌊 NARM (Neuroaffective Relational Model) | Dr. Laurence Heller |
+| 🌑 Shadow Constellation | Nir Esterman |
+| 🌱 Holistic Life Coaching | Alan Cohen |
+| 💎 Diamond Approach | A.H. Almaas |
 
-### 🎯 Three Service Areas · 三大服务领域
+### 🎯 Three Service Areas
 
-| Area · 领域 | Focus · 核心 |
+| Area | Focus |
 |---|---|
-| 💆 Chronic Pain & Somatic Recovery · 慢性疼痛与躯体症状恢复 | Emotional roots of symptoms 症状的情感根源 |
-| 🌸 Emotional Processing & Trauma Release · 情绪处理与创伤释放 | Safe container for feelings 安全的情绪空间 |
-| 🔍 Self-Inquiry & Embodied Awareness · 自我探询与具身觉知 | Who you are beneath patterns 模式之下的真实自我 |
+| 💆 Chronic Pain & Somatic Recovery | Emotional roots of physical symptoms |
+| 🌸 Emotional Processing & Trauma Release | Safe container for deep feelings |
+| 🔍 Self-Inquiry & Embodied Awareness | Who you are beneath the patterns |
 
 ---
 
-## 🎨 Theme System · 主题系统
+## 🎨 Theme System
 
-| Theme · 主题 | Icon | Vibe · 风格 |
+| Theme | Icon | Vibe |
 |---|---|---|
-| **Dark · 暗夜** | 🌙 | Deep purple meditation 深紫冥想 (default 默认) |
-| **Light · 柔光** | ☀️ | Soft lavender & white 薰衣草白 |
-| **Nature · 自然** | 🌿 | Forest green & teal 深林绿 |
+| **Dark** | 🌙 | Deep purple meditation (default) |
+| **Light** | ☀️ | Soft lavender & white |
+| **Nature** | 🌿 | Deep forest green & teal |
 
-Saved via `localStorage` · 通过 `localStorage` 自动保存
+Theme preference saved automatically via `localStorage`.
 
 ---
 
-## 🚀 Quick Start · 快速开始
+## 🚀 Quick Start
 
-### Online · 在线 (Recommended · 推荐)
+### Online (Recommended)
 
 👉 **[beingyousef.netlify.app](https://beingyousef.netlify.app/)**
 
-### Local · 本地运行
+### Run Locally
 
 ```bash
 git clone https://github.com/zixiang2008/Beling.git
@@ -158,115 +150,356 @@ npx http-server . -p 8080 -o
 
 No build step, no dependencies — pure HTML/CSS/JS.
 
-零构建、零依赖——纯 HTML/CSS/JS。
-
 ---
 
-## 🏗️ Tech Stack · 技术栈
+## 🏗️ Tech Stack
 
-| Category · 类别 | Technology · 技术 |
+| Category | Technology |
 |---|---|
-| **Frontend · 前端** | HTML5 + CSS3 + Vanilla JavaScript (zero framework 零框架) |
-| **Audio · 音频** | Web Audio API (ambient sound synthesis 环境音合成 + binaural beats 双耳节拍) |
-| **Voice · 语音** | Web Speech Synthesis API (meditation guidance 冥想引导) |
-| **Themes · 主题** | CSS custom properties + `data-theme` attribute switching |
-| **i18n · 国际化** | Custom engine 自定义引擎 + module-level language packs 模块级语言包 |
-| **Auth · 认证** | Local auth (localStorage + sessionStorage), PIN hashed |
-| **Design · 设计** | Mobile-first 移动优先, glassmorphism 玻璃拟态, micro-animations 微动画 |
-| **Deploy · 部署** | GitHub → Netlify auto-deploy 自动部署 |
+| **Frontend** | HTML5 + CSS3 + Vanilla JavaScript (zero framework) |
+| **Audio** | Web Audio API (ambient synthesis + binaural beats) |
+| **Voice** | Web Speech Synthesis API (meditation guidance) |
+| **Themes** | CSS custom properties + `data-theme` switching |
+| **i18n** | Custom engine + module-level language packs |
+| **Auth** | Local auth (localStorage + sessionStorage), PIN hashed |
+| **Design** | Mobile-first, glassmorphism, micro-animations |
+| **Deploy** | GitHub → Netlify auto-deploy |
 
 ---
 
-## 📁 Project Structure · 项目结构
+## 📁 Project Structure
 
 ```
 BeingYourself/
-├── index.html                # SPA entry point · 单页入口
+├── index.html                # SPA entry point
 ├── css/
-│   └── style.css             # Global styles · 全局样式 (3700+ lines, 3 themes, responsive)
+│   └── style.css             # Global styles (3700+ lines, 3 themes, responsive)
 ├── js/
-│   ├── i18n.js               # 🌍 i18n engine · 国际化引擎 (EN/ZH/JA/TH)
-│   ├── auth.js               # 🔐 Auth system · 认证系统 (2-20 char + PIN)
-│   ├── app.js                # 🏠 Core · 核心逻辑 (routing, navigation, splash)
-│   ├── theme.js              # 🎨 Theme manager · 主题管理 (dark/light/nature)
-│   ├── emotions.js           # 😊 Emotion Compass · 情绪罗盘 (91 emotions)
-│   ├── questioning.js        # 🔍 Deep Inquiry · 深度探索 (5 dimensions)
-│   ├── recall.js             # ⏰ 24h Recall · 24小时回忆
-│   ├── meditation.js         # 🧘 Meditation v3 · 冥想空间 (sounds/brainwave/animation)
-│   ├── brain.js              # 🧠 Feeling Mode · 感受模式 (exercises + check-out)
-│   ├── knowledge.js          # 📚 Learn & Grow · 一起学习成长 (expandable details)
-│   ├── counselor.js          # 🔗 Mentor Connect · 导师链接
-│   └── lang/                 # 📦 Language packs · 语言包
+│   ├── i18n.js               # 🌍 i18n engine (EN/ZH/JA/TH)
+│   ├── auth.js               # 🔐 Auth system (2-20 char username + PIN)
+│   ├── app.js                # 🏠 Core logic (routing, navigation, splash)
+│   ├── theme.js              # 🎨 Theme manager (dark/light/nature)
+│   ├── emotions.js           # 😊 Emotion Compass (91 emotions)
+│   ├── questioning.js        # 🔍 Deep Inquiry (5 dimensions)
+│   ├── recall.js             # ⏰ 24h Recall (timeline review)
+│   ├── meditation.js         # 🧘 Meditation v3 (sounds/brainwave/animation)
+│   ├── brain.js              # 🧠 Feeling Mode (exercises + check-out)
+│   ├── knowledge.js          # 📚 Learn & Grow (expandable details)
+│   ├── counselor.js          # 🔗 Mentor Connect
+│   └── lang/                 # 📦 Language packs
 │       ├── emotions-lang.js
 │       ├── questioning-lang.js
 │       ├── recall-lang.js
 │       ├── meditation-lang.js
 │       └── brain-lang.js
-├── miniprogram/              # 📱 WeChat Mini Program · 微信小程序版
+├── miniprogram/              # 📱 WeChat Mini Program version
 └── README.md
 ```
 
 ---
 
-## 🌍 Internationalization · 国际化
+## 🌍 Internationalization
 
-Real-time switch, no reload · 实时切换，无需刷新
+Real-time switch, no page reload needed.
 
-| Language · 语言 | Code · 代码 | Status · 状态 |
+| Language | Code | Status |
 |---|---|---|
-| 🇺🇸 English | `en` | ✅ Default · 默认 |
-| 🇨🇳 中文 | `zh` | ✅ Full · 完整 |
-| 🇯🇵 日本語 | `ja` | ✅ Full · 完整 |
-| 🇹🇭 ไทย | `th` | ✅ Full · 完整 |
+| 🇺🇸 English | `en` | ✅ Default |
+| 🇨🇳 中文 | `zh` | ✅ Full |
+| 🇯🇵 日本語 | `ja` | ✅ Full |
+| 🇹🇭 ไทย | `th` | ✅ Full |
 
 ---
 
-## 🔐 Authentication · 认证系统
+## 🔐 Authentication
 
-| Property · 属性 | Details · 详情 |
+| Property | Details |
 |---|---|
-| **Username · 用户名** | 2–20 characters 字符 (Chinese 中文 / English / numbers 数字) |
-| **Password · 密码** | 4-digit PIN 四位数PIN (hashed 加密, never plain text 不明文存储) |
-| **Storage · 存储** | localStorage (user data 用户数据) + sessionStorage (session 会话) |
-| **Philosophy · 理念** | Most tools work without login 大部分功能无需登录; login for saving personal data 登录仅用于保存个人数据 |
+| **Username** | 2–20 characters (Chinese, English, numbers) |
+| **Password** | 4-digit PIN (hashed, never stored in plain text) |
+| **Storage** | localStorage (user data) + sessionStorage (session) |
+| **Philosophy** | Most tools work without login; login only for saving personal data |
 
 ---
 
-## 📋 Changelog · 更新日志
+## 📋 Changelog
 
 ### v3.0.0 — 2026-04-05
-- 🧘 **Meditation v3** — Professional-grade experience 专业级冥想体验
-  - 🎵 6 ambient sounds via Web Audio API 六种合成环境音
-  - 🧠 4 brainwave modes (binaural beats) 四种脑波双耳节拍
-  - ✨ 3 visual animations (bubbles / bowl / nature) 三种冥想动画
-  - 🎤 3 guidance modes (silent / breath / full) 三种引导模式
-  - 🎚️ Real-time volume sliders 实时音量滑块
-- 📚 **Knowledge Hub → Learn & Grow Together** 知识库→一起学习成长
-  - Subtitle: Mind-Body-Spirit Healing 副标题：身心灵疗愈体系
-  - AI-generated detailed descriptions (hover + click expand) AI 生成详细说明（悬停+点击展开）
-  - 6 professional modalities · 3 service areas 六大专业方法·三大服务领域
+- 🧘 **Meditation v3** — Professional-grade immersive experience
+  - 🎵 6 ambient sounds via Web Audio API synthesis
+  - 🧠 4 brainwave modes (binaural beats with stereo panning)
+  - ✨ 3 visual animations (bubbles / singing bowl / nature)
+  - 🎤 3 guidance modes (silent / breath only / full guide)
+  - 🎚️ Real-time volume sliders for sound and brainwave
+- 📚 **Knowledge Hub → Learn & Grow Together**
+  - Subtitle: Mind-Body-Spirit Healing System
+  - AI-generated detailed descriptions (hover tooltip + click-to-expand)
+  - 6 professional modalities + 3 service areas
 
 ### v2.2.0 — 2026-04-05
-- 🎨 3 visual themes (Dark / Light / Nature) 三套视觉主题
-- 🌐 Default language → English 默认语言改为英文
-- 🔊 Voice guidance for Meditation 冥想语音引导
-- ✂️ Removed 3 modules 移除 3 个模块: Inner Dialogue 内心对话, Action Tips 行动建议, T-Language T语言
-- 🧠 Feeling Mode check-out reflection 感受模式反思环节
-- 📱 Mobile layout optimization 移动端布局优化
-- 📦 Card reorder + full-width Knowledge card 卡片排序+知识库全宽
+- 🎨 3 visual themes (Dark / Light / Nature) with one-click toggle
+- 🌐 Default language changed to English
+- 🔊 Voice guidance for Meditation (Web Speech API)
+- ✂️ Removed 3 modules: Inner Dialogue, Action Tips, T-Language
+- 🧠 Feeling Mode check-out reflection
+- 📱 Mobile layout optimization (480px/360px breakpoints)
+- 📦 Card reorder + full-width Knowledge card
 
 ### v2.1.0 — 2026-03-13
-- 🐛 Fixed blank sub-pages 修复空白子页面
-- ✨ Emotion Compass → 91 emotions 情绪罗盘扩展到91种
-- ✨ Preview mode for logged-out users 未登录预览模式
+- 🐛 Fixed blank sub-pages
+- ✨ Emotion Compass expanded to 91 emotions
+- ✨ Preview mode for logged-out users
 
 ### v2.0.0 — 2026-03-11
-- ✨ 4-language i18n system 四语国际化
-- ✨ Local auth with registration 本地认证注册
-- 🎨 Dark glassmorphism design 暗色玻璃拟态设计
+- ✨ 4-language i18n system
+- ✨ Local auth with registration
+- 🎨 Dark glassmorphism design
 
 ### v1.0.0 — 2026-03-10
-- 🎉 Initial release 初始发布
+- 🎉 Initial release
+
+---
+---
+
+# 🇨🇳 中文
+
+## ✨ 这是什么？
+
+Being Yourself 是一款精简的、以痛点为导向的正念 Web 应用。它只问一个简单的问题：**"你今天感觉如何？"** 然后通过 7 个专注的模块引导你探索你的内在感受。
+
+> 🧘 *向内看，发现你真实的自己。*
+
+### 核心亮点
+
+- 🎨 **3 套视觉主题** — 暗夜冥想、柔光、自然绿（一键切换）
+- 🌍 **4 种语言** — English（默认）、中文、日本語、ไทย（实时切换）
+- 🎵 **6 种环境音** — 雨声、海浪、森林、篝火、风声、颂钵（Web Audio API 合成）
+- 🧠 **4 种脑波模式** — Delta、Theta、Alpha、Beta（双耳节拍）
+- 🔊 **语音引导** — Web Speech API，无需下载
+- 📱 **移动优先** — 触控优化、安全区支持、响应式
+- 🔓 **无需登录** — 大部分功能无需账号
+
+---
+
+## 🧩 功能模块
+
+| 模块 | 图标 | 解决什么 | 登录 |
+|---|---|---|---|
+| **情绪罗盘** | 😊 | "我说不出我的感受" — 91 种情绪+场景+应对建议 | 🟢 免费浏览 |
+| **深度探索** | 🔍 | "我想探索内心" — 五个维度（身体/情绪/思维/关系/意义） | 🔐 需登录 |
+| **感受模式** | 🧠 | "我想走出头脑" — 左脑→右脑切换练习+反思环节 | 🟢 开放 |
+| **导师链接** | 🔗 | "我需要专业支持" — 直接链接专业咨询 | 🟢 开放 |
+| **24 小时回忆** | ⏰ | "我想回顾今天" — 按时段的结构化回顾 | 🔐 需登录 |
+| **冥想空间** | 🧘 | "我需要安静下来" — 完整沉浸体验（详见下方） | 🟢 开放 |
+| **一起学习成长** | 📚 | "我想学习觉察方法" — 六大专业方法+三大服务领域 | 🟢 开放 |
+
+---
+
+## 🧘 冥想空间 v3
+
+参考 **Calm、Headspace、Insight Timer、myNoise** 等 10+ 专业平台打造的专业级冥想体验。
+
+### 🎵 环境音（Web Audio API 合成）
+
+| 声音 | 合成方式 |
+|---|---|
+| 🌧️ 雨声 | 白噪声 + 低通滤波器 |
+| 🌊 海浪 | 白噪声 + LFO 增益调制 |
+| 🌲 森林 | 粉噪声 + 带通滤波 |
+| 🔥 篝火 | 棕噪声 + 低通滤波 |
+| 💨 风声 | 白噪声 + 共振 LFO |
+| 🔔 颂钵 | 正弦波谐波（174/285/396 Hz） |
+
+### 🧠 脑波频率（双耳节拍）
+
+| 脑波 | 频率 | 效果 |
+|---|---|---|
+| 🧘 Delta | 0.5–4 Hz | 深度睡眠·修复 |
+| 🌙 Theta | 4–8 Hz | 深度冥想·创意 |
+| 🧠 Alpha | 8–14 Hz | 放松·平静 |
+| ⚡ Beta | 14–30 Hz | 专注·清醒 |
+
+> 🎧 需要耳机才能体验双耳节拍效果
+
+### ✨ 冥想动画
+
+| 动画 | 视觉效果 |
+|---|---|
+| 🫧 气泡 | 缓慢上升的半透明气泡 |
+| 🔔 颂钵 | 同心波纹扩散 |
+| 🌿 大自然 | 飘落树叶 + 萤火虫微光 |
+
+### 🎤 引导模式
+
+| 模式 | 描述 |
+|---|---|
+| 🔇 静默 | 仅环境音 |
+| 🌬️ 仅呼吸 | 呼吸指令 + 铃声 |
+| 🎙️ 完整引导 | 呼吸 + 觉察引导语 + 铃声 |
+
+---
+
+## 📚 一起学习成长
+
+**副标题：身心灵疗愈体系**
+
+### 🎓 六大专业方法
+
+每个方法卡片都有**悬停提示 + 点击展开**的详细说明（创始人、核心理念、工作方式、适合人群）。
+
+| 方法 | 创始人 |
+|---|---|
+| 💜 慈悲探询 Compassionate Inquiry | Dr. Gabor Maté |
+| 🪞 内在家族系统 IFS | Dr. Richard Schwartz |
+| 🌊 神经情感关系模型 NARM | Dr. Laurence Heller |
+| 🌑 阴影排列 Shadow Constellation | Nir Esterman |
+| 🌱 全人生活教练 Holistic Life Coaching | Alan Cohen |
+| 💎 钻石途径 Diamond Approach | A.H. Almaas |
+
+### 🎯 三大服务领域
+
+| 领域 | 核心 |
+|---|---|
+| 💆 慢性疼痛与躯体症状恢复 | 症状的情感根源 |
+| 🌸 情绪处理与创伤释放 | 安全的情绪空间 |
+| 🔍 自我探询与具身觉知 | 模式之下的真实自我 |
+
+---
+
+## 🎨 主题系统
+
+| 主题 | 图标 | 风格 |
+|---|---|---|
+| **暗夜** | 🌙 | 深紫冥想（默认） |
+| **柔光** | ☀️ | 薰衣草白 |
+| **自然** | 🌿 | 深林绿 |
+
+通过 `localStorage` 自动保存主题偏好。
+
+---
+
+## 🚀 快速开始
+
+### 在线（推荐）
+
+👉 **[beingyousef.netlify.app](https://beingyousef.netlify.app/)**
+
+### 本地运行
+
+```bash
+git clone https://github.com/zixiang2008/Beling.git
+cd Beling
+npx http-server . -p 8080 -o
+```
+
+零构建、零依赖——纯 HTML/CSS/JS。
+
+---
+
+## 🏗️ 技术栈
+
+| 类别 | 技术 |
+|---|---|
+| **前端** | HTML5 + CSS3 + 原生 JavaScript（零框架） |
+| **音频** | Web Audio API（环境音合成 + 双耳节拍） |
+| **语音** | Web Speech Synthesis API（冥想引导） |
+| **主题** | CSS 自定义属性 + `data-theme` 切换 |
+| **国际化** | 自定义引擎 + 模块级语言包 |
+| **认证** | 本地认证（localStorage + sessionStorage），PIN 加密 |
+| **设计** | 移动优先、玻璃拟态、微动画 |
+| **部署** | GitHub → Netlify 自动部署 |
+
+---
+
+## 📁 项目结构
+
+```
+BeingYourself/
+├── index.html                # 单页应用入口
+├── css/
+│   └── style.css             # 全局样式（3700+ 行，3 套主题，响应式）
+├── js/
+│   ├── i18n.js               # 🌍 国际化引擎（EN/ZH/JA/TH）
+│   ├── auth.js               # 🔐 认证系统（2-20字符用户名 + PIN）
+│   ├── app.js                # 🏠 核心逻辑（路由、导航、开屏动画）
+│   ├── theme.js              # 🎨 主题管理（暗夜/柔光/自然）
+│   ├── emotions.js           # 😊 情绪罗盘（91 种情绪）
+│   ├── questioning.js        # 🔍 深度探索（5 个维度）
+│   ├── recall.js             # ⏰ 24 小时回忆
+│   ├── meditation.js         # 🧘 冥想空间 v3（环境音/脑波/动画）
+│   ├── brain.js              # 🧠 感受模式（练习 + 反思）
+│   ├── knowledge.js          # 📚 一起学习成长（可展开详情）
+│   ├── counselor.js          # 🔗 导师链接
+│   └── lang/                 # 📦 语言包
+│       ├── emotions-lang.js
+│       ├── questioning-lang.js
+│       ├── recall-lang.js
+│       ├── meditation-lang.js
+│       └── brain-lang.js
+├── miniprogram/              # 📱 微信小程序版
+└── README.md
+```
+
+---
+
+## 🌍 国际化
+
+实时切换，无需刷新页面。
+
+| 语言 | 代码 | 状态 |
+|---|---|---|
+| 🇺🇸 English | `en` | ✅ 默认 |
+| 🇨🇳 中文 | `zh` | ✅ 完整翻译 |
+| 🇯🇵 日本語 | `ja` | ✅ 完整翻译 |
+| 🇹🇭 ไทย | `th` | ✅ 完整翻译 |
+
+---
+
+## 🔐 认证系统
+
+| 属性 | 详情 |
+|---|---|
+| **用户名** | 2–20 个字符（中文、英文、数字） |
+| **密码** | 4 位 PIN（加密存储，不以明文保存） |
+| **存储** | localStorage（用户数据）+ sessionStorage（会话） |
+| **理念** | 大部分功能无需登录；登录仅用于保存个人数据 |
+
+---
+
+## 📋 更新日志
+
+### v3.0.0 — 2026-04-05
+- 🧘 **冥想空间 v3** — 专业级沉浸体验
+  - 🎵 6 种环境音（Web Audio API 合成）
+  - 🧠 4 种脑波模式（立体声双耳节拍）
+  - ✨ 3 种冥想动画（气泡/颂钵/大自然）
+  - 🎤 3 种引导模式（静默/仅呼吸/完整引导）
+  - 🎚️ 实时音量滑块
+- 📚 **知识库 → 一起学习成长**
+  - 副标题：身心灵疗愈体系
+  - AI 生成详细说明（悬停提示 + 点击展开）
+  - 六大专业方法 + 三大服务领域
+
+### v2.2.0 — 2026-04-05
+- 🎨 三套视觉主题（暗夜/柔光/自然）
+- 🌐 默认语言改为英文
+- 🔊 冥想语音引导
+- ✂️ 移除 3 个模块：内心对话、行动建议、T语言
+- 🧠 感受模式反思环节
+- 📱 移动端布局优化
+
+### v2.1.0 — 2026-03-13
+- 🐛 修复空白子页面
+- ✨ 情绪罗盘扩展到 91 种
+- ✨ 未登录预览模式
+
+### v2.0.0 — 2026-03-11
+- ✨ 四语国际化系统
+- ✨ 本地认证注册
+- 🎨 暗色玻璃拟态设计
+
+### v1.0.0 — 2026-03-10
+- 🎉 初始发布
 
 ---
 
@@ -278,8 +511,8 @@ Real-time switch, no reload · 实时切换，无需刷新
 
 *If this tool helps you, please give it a ⭐ Star!*
 
-*如果这个工具对你有帮助，请给个 ⭐ 星标！*
+*如果对你有帮助，请给个 ⭐ 星标！*
 
-[🌐 Live Demo 在线体验](https://beingyousef.netlify.app/) · [📂 GitHub](https://github.com/zixiang2008/Beling) · [🌐 Official Site 官网](https://www.beingyourself.love)
+[🌐 Live Demo](https://beingyousef.netlify.app/) · [📂 GitHub](https://github.com/zixiang2008/Beling)
 
 </div>
