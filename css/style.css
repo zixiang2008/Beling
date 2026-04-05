@@ -2947,6 +2947,132 @@ textarea {
     margin: 0;
 }
 
+/* -- 副标题 -- */
+.kb-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-accent);
+    font-weight: 500;
+    margin: -4px 0 8px;
+    letter-spacing: 0.08em;
+}
+
+/* -- 提示文字 -- */
+.kb-section-tip {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin: -6px 0 10px;
+    font-style: italic;
+}
+
+/* -- 可展开卡片交互 -- */
+.kb-expandable {
+    cursor: pointer;
+    position: relative;
+}
+
+.kb-expandable:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow);
+}
+
+.kb-expand-arrow {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.kb-expandable[data-expanded="true"] .kb-expand-arrow {
+    transform: rotate(90deg);
+    color: var(--text-accent);
+}
+
+/* -- area card layout fix for expandable -- */
+.kb-area-card {
+    display: block;
+}
+
+.kb-area-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.kb-area-info {
+    flex: 1;
+}
+
+.kb-method-info {
+    flex: 1;
+}
+
+/* -- 详情面板 -- */
+.kb-detail-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-top: 0;
+    padding: 0 4px;
+    font-size: 0.82rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.kb-expandable[data-expanded="true"] .kb-detail-panel {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 14px;
+    padding: 14px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+}
+
+.kb-detail-panel h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 10px;
+}
+
+.kb-detail-panel p {
+    margin: 6px 0;
+}
+
+.kb-detail-panel ul {
+    margin: 4px 0 8px;
+    padding-left: 18px;
+}
+
+.kb-detail-panel li {
+    margin-bottom: 4px;
+}
+
+.kb-detail-panel em {
+    color: var(--text-accent);
+    font-style: italic;
+}
+
+.kb-detail-close {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 14px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.kb-detail-close:hover {
+    border-color: var(--text-accent);
+    color: var(--text-accent);
+}
+
 /* -- 适用人群 -- */
 .kb-for-card {
     background: var(--bg-card);

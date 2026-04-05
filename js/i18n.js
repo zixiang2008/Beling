@@ -22,7 +22,7 @@ const I18n = (() => {
                 home: '觉察', emotions: '情绪罗盘', questioning: '深度发问',
                 recall: '24h 回忆', meditation: '冥想空间', brain: '感受模式',
                 dialogue: '觉察对话', actions: '行动建议', sharing: '分享句式',
-                knowledge: '觉察理论', counselor: '导师链接'
+                knowledge: '一起学习成长', counselor: '导师链接'
             },
             cards: {
                 emotions: { title: '情绪罗盘', desc: '我想理解我的感受' },
@@ -68,7 +68,7 @@ const I18n = (() => {
                 home: 'Awareness', emotions: 'Emotion Compass', questioning: 'Deep Inquiry',
                 recall: '24h Recall', meditation: 'Meditation', brain: 'Feeling Mode',
                 dialogue: 'Inner Dialogue', actions: 'Action Tips', sharing: 'T-Language',
-                knowledge: 'Awareness Theory', counselor: 'Mentor Connect'
+                knowledge: 'Learn & Grow', counselor: 'Mentor Connect'
             },
             cards: {
                 emotions: { title: 'Emotion Compass', desc: 'I want to understand my feelings' },
@@ -114,7 +114,7 @@ const I18n = (() => {
                 home: '気づき', emotions: '感情コンパス', questioning: '深い問い',
                 recall: '24時間振り返り', meditation: '瞑想空間', brain: '感覚モード',
                 dialogue: '内なる対話', actions: 'アクション', sharing: 'T言語',
-                knowledge: '気づき理論', counselor: 'メンター'
+                knowledge: '一緒に学び成長', counselor: 'メンター'
             },
             cards: {
                 emotions: { title: '感情コンパス', desc: '自分の感情を理解したい' },
@@ -160,7 +160,7 @@ const I18n = (() => {
                 home: 'การตระหนักรู้', emotions: 'เข็มทิศอารมณ์', questioning: 'คำถามลึก',
                 recall: 'ทบทวน 24 ชม.', meditation: 'พื้นที่สมาธิ', brain: 'โหมดความรู้สึก',
                 dialogue: 'บทสนทนาภายใน', actions: 'คำแนะนำ', sharing: 'ภาษา T',
-                knowledge: 'ทฤษฎีการตระหนักรู้', counselor: 'เชื่อมต่อที่ปรึกษา'
+                knowledge: 'เรียนรู้ด้วยกัน', counselor: 'เชื่อมต่อที่ปรึกษา'
             },
             cards: {
                 emotions: { title: 'เข็มทิศอารมณ์', desc: 'ฉันอยากเข้าใจความรู้สึกของฉัน' },
